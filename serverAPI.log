@@ -1,0 +1,64 @@
+2026-01-02 13:11:36 | INFO | 🚀 API iniciada
+2026-01-02 13:11:36 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:11:36 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:11:54 | INFO | Procesando PDF: 2025009224-TORRES_431.pdf
+2026-01-02 13:11:55 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:12:22 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:12:22 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:20:38 | INFO | 🛑 API detenida
+2026-01-02 13:20:39 | INFO | 🚀 API iniciada
+2026-01-02 13:20:39 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:20:39 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:21:14 | INFO | 🛑 API detenida
+2026-01-02 13:21:15 | INFO | 🚀 API iniciada
+2026-01-02 13:21:15 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:21:15 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:21:16 | INFO | 🛑 API detenida
+2026-01-02 13:21:17 | INFO | 🚀 API iniciada
+2026-01-02 13:21:17 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:21:17 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:21:23 | INFO | 🛑 API detenida
+2026-01-02 13:21:43 | INFO | 🚀 API iniciada
+2026-01-02 13:21:43 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:21:43 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:21:48 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:21:48 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:22:02 | INFO | 🛑 API detenida
+2026-01-02 13:22:03 | INFO | 🚀 API iniciada
+2026-01-02 13:22:03 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:22:03 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:22:41 | INFO | 🛑 API detenida
+2026-01-02 13:22:42 | INFO | 🚀 API iniciada
+2026-01-02 13:22:42 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:22:42 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:22:50 | INFO | 🛑 API detenida
+2026-01-02 13:22:51 | INFO | 🚀 API iniciada
+2026-01-02 13:22:51 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:22:51 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:22:54 | INFO | 🛑 API detenida
+2026-01-02 13:22:57 | INFO | 🚀 API iniciada
+2026-01-02 13:22:57 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:22:57 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:22:59 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:22:59 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:23:11 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:23:12 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:25:48 | INFO | 🛑 API detenida
+2026-01-02 13:25:49 | INFO | 🚀 API iniciada
+2026-01-02 13:25:49 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:25:49 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:25:50 | INFO | 🛑 API detenida
+2026-01-02 13:25:52 | INFO | 🚀 API iniciada
+2026-01-02 13:25:52 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:25:52 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:25:52 | INFO | 🛑 API detenida
+2026-01-02 13:25:53 | INFO | 🚀 API iniciada
+2026-01-02 13:25:53 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:25:53 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:25:58 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:25:58 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:26:09 | INFO | 🛑 API detenida
+2026-01-02 13:26:10 | INFO | 🚀 API iniciada
+2026-01-02 13:26:10 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:26:10 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:27:30 | INFO | 🛑 API detenida

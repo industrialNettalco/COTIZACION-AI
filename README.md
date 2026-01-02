@@ -1,123 +1,110 @@
-# COTIZACION-AI
+# cotizacion-ai
 
-API REST para extraccion de items desde PDFs de cotizaciones usando IA.
+## 📄 Descripción
+**cotizacion-ai** es una API desarrollada con **FastAPI** que permite procesar archivos PDF de cotizaciones, convertirlos a imágenes y utilizar modelos **Groq Vision (Llama 4)** para extraer información estructurada del documento.
 
-## Requisitos
+La API retorna un **JSON estandarizado** con:
+- Datos del encabezado del documento (empresa, RUC, factura, moneda, IGV, etc.).
+- Detalle de ítems (nombre, cantidad, precio unitario, unidad y adicionales).
 
-- Python 3.10.19
-- Poppler (para conversion PDF a imagen)
-- Tesseract OCR (para PDFs escaneados)
-- GROQ API Key
+El proyecto está alineado con los **Estándares de Desarrollo del Área de Planeamiento**.
 
-## Instalacion
+---
 
-1. Clonar el repositorio:
-```bash
-git clone <url-del-repo>
-cd COTIZACION-AI
+## 🎯 Objetivos
+- Automatizar la lectura de cotizaciones en PDF.
+- Reducir errores manuales en el registro de información.
+- Estandarizar la salida de datos para integraciones internas.
+- Facilitar la mantenibilidad y escalabilidad del servicio.
+
+---
+
+## 🧱 Tecnologías utilizadas
+- Python 3.10+
+- FastAPI
+- Uvicorn
+- Groq API (Vision – Llama 4)
+- pdf2image + Poppler
+- Loguru
+- python-dotenv
+
+---
+
+## 📁 Estructura del proyecto
+```
+cotizacion-ai/
+├── app_fastapi.py
+├── requirements.txt
+├── README.md
+├── .env.example
+├── tmp/
+└── serverAPI.log
 ```
 
-2. Crear entorno virtual:
-```bash
+---
+
+## ⚙️ Configuración del entorno
+
+### Crear entorno virtual
+```
 python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate
 ```
 
-3. Instalar dependencias:
-```bash
+### Instalar dependencias
+```
 pip install -r requirements.txt
 ```
 
-4. Instalar Poppler (Windows con Conda):
-```bash
-conda install -c conda-forge poppler
-```
-
-5. Instalar Tesseract:
-- Windows: Descargar desde https://github.com/UB-Mannheim/tesseract/wiki
-- Linux: `sudo apt install tesseract-ocr tesseract-ocr-spa`
-
-6. Configurar variables de entorno:
-```bash
-# Crear archivo .env
-GROQ_API_KEY=tu_api_key_aqui
-```
-
-## Uso
-
-1. Iniciar el servidor:
-```bash
-python app.py
-```
-
-2. El servidor estara disponible en `http://localhost:5000`
-
-## Endpoints
-
-### GET /
-Informacion de la API.
-
-**Respuesta:**
-```json
-{
-  "message": "API de extraccion de items de PDF",
-  "uso": "/process?pdf_url=<URL_DEL_PDF>"
-}
-```
-
-### GET /process
-Procesa un PDF y extrae los items.
-
-**Parametros:**
-- `pdf_url` (requerido): URL directa al archivo PDF
-
-**Ejemplo:**
-```
-GET /process?pdf_url=https://ejemplo.com/cotizacion.pdf
-```
-
-**Respuesta exitosa:**
-```json
-{
-  "items": [
-    {
-      "nombre": "PERNO SOCKET CILINDRICO M3X0.5X8MM ACERO GR 12.9",
-      "cantidad": 100,
-      "precio": 1.0
-    },
-    {
-      "nombre": "ARANDELA PLANA ACERO TEMPLADO 0.6XO46XO35MM",
-      "cantidad": 12,
-      "precio": 20.0
-    }
-  ]
-}
-```
-
-**Errores:**
-- `400`: Falta pdf_url o error descargando el PDF
-- `500`: Error interno en el procesamiento
-
-## Caracteristicas
-
-- Extraccion de texto con pdfplumber (rapido)
-- OCR con Tesseract para PDFs escaneados (fallback automatico)
-- Modelo LLaMA 3.3 70B via GROQ API
-- Normalizacion de texto (acentos, simbolos especiales)
-- Nombres de productos limitados a 60 caracteres
-
-## Estructura del Proyecto
+### Variables de entorno
+Crear archivo `.env` (no versionado):
 
 ```
-COTIZACION-AI/
-├── app.py              # Aplicacion principal
-├── requirements.txt    # Dependencias Python
-├── .env               # Variables de entorno (no incluido)
-├── tmp/               # PDFs temporales descargados
-└── README.md          # Este archivo
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_VISION_MODEL=meta-llama/llama-4-maverick-17b-128e-instruct
+PDF_IMG_DPI=220
+PDF_MAX_PAGES=10
+PDF_BASE_DIR=O:\Publicar_Web\Ordenes_Servicio
 ```
 
-## Licencia
+---
 
-MIT
+## ▶️ Ejecución
+```
+uvicorn app_fastapi:app --host 0.0.0.0 --port 5000 --reload
+```
+
+---
+
+## 🔌 Endpoints
+
+### Home
+GET /home
+
+### Información
+GET /
+
+### Procesar PDF
+GET /process?pdf=archivo.pdf
+
+---
+
+## 🪵 Logging
+- Archivo: serverAPI.log
+- Nivel: INFO
+- Rotación automática
+
+---
+
+## 🔐 Seguridad
+- Variables sensibles en `.env`
+- `.env` ignorado por Git
+- Accesos controlados por responsables del área
+
+---
+
+## 🚀 Pase a Producción
+- Prueba flujo principal (2 veces)
+- Prueba flujos secundarios
+- Revisión de código
+- Validación con PO y Jefaturas

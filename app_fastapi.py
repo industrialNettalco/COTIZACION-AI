@@ -1,67 +1,89 @@
+# app_fastapi.py
+# API PDF -> imágenes -> Groq Vision (Llama 4) -> JSON
+# Estándar Nettalco/Planeamiento: FastAPI + Loguru + HTTPException + JSONResponse + Startup/Shutdown
+
 import os
 import json
 import re
 import base64
 import io
 from pathlib import Path
-from dotenv import load_dotenv
+from typing import Any, Dict, List, Optional
 
-import requests
-from flask import Flask, request, jsonify
+from dotenv import load_dotenv
+from loguru import logger
+
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import PlainTextResponse, JSONResponse, Response
+
 from pdf2image import convert_from_path
 from openai import OpenAI
 
+
 # ===================== CONFIG =====================
 load_dotenv()
+
+# ---- Logging corporativo ----
+logger.add(
+    "serverAPI.log",
+    format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
+    level="INFO",
+    rotation="10 MB",
+    compression="zip",
+)
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
 if not GROQ_API_KEY:
     raise SystemExit("Falta GROQ_API_KEY en tu .env")
 
-# MODELO GROQ QUE SOPORTA IMAGENES (Vision)
-# Docs Groq: Llama 4 Scout / Maverick soportan imágenes y JSON mode
 MODEL_VISION = os.getenv(
     "GROQ_VISION_MODEL",
     "meta-llama/llama-4-maverick-17b-128e-instruct"
 ).strip()
 
-# PDF -> imágenes
-DPI = int(os.getenv("PDF_IMG_DPI", "220"))
-MAX_PAGES = int(os.getenv("PDF_MAX_PAGES", "10"))
-
-# Límite Groq Vision: máximo 5 imágenes por request
+DPI = int(os.getenv("PDF_IMG_DPI"))
+MAX_PAGES = int(os.getenv("PDF_MAX_PAGES"))
 MAX_IMAGES_PER_REQUEST = 5
 
-# Poppler (Windows/Conda)
 POPPLER_BIN = os.path.join(os.environ.get("CONDA_PREFIX", ""), "Library", "bin")
 
+PDF_BASE_DIR = Path(os.getenv("PDF_BASE_DIR"))
 TMP_DIR = Path("tmp")
 TMP_DIR.mkdir(exist_ok=True)
 
 # Cliente OpenAI-compatible apuntando a GROQ
 client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
 
-app = Flask(__name__)
+
+# ===================== APP =====================
+app = FastAPI(
+    title="Cotizacion Extractor API",
+    description="PDF -> imágenes -> Groq Vision (Llama 4) -> JSON",
+    version="1.0.0",
+)
+
+
+@app.on_event("startup")
+async def startup():
+    # En tu estándar, se acostumbra tener startup/shutdown aunque aquí no haya DB async.
+    logger.info("🚀 API iniciada")
+    logger.info(f"Modelo: {MODEL_VISION}")
+    logger.info(f"PDF_BASE_DIR: {PDF_BASE_DIR}")
+
+
+@app.on_event("shutdown")
+async def shutdown():
+    logger.info("🛑 API detenida")
+
 
 # ===================== HELPERS =====================
 
-def download_pdf(url: str, out_path: Path) -> Path:
-    r = requests.get(url, stream=True, timeout=60)
-    r.raise_for_status()
-    with open(out_path, "wb") as f:
-        for chunk in r.iter_content(chunk_size=1024 * 256):
-            if chunk:
-                f.write(chunk)
-    return out_path
-
-
-def pdf_to_images(pdf_path: Path, dpi: int = 220, max_pages: int = 10):
+def pdf_to_images(pdf_path: Path, dpi: int, max_pages: int):
     if not POPPLER_BIN or not Path(POPPLER_BIN).exists():
         raise RuntimeError(
             f"Poppler no encontrado en {POPPLER_BIN}. "
             "Instala con: conda install -c conda-forge poppler"
         )
-
     images = convert_from_path(str(pdf_path), dpi=dpi, poppler_path=POPPLER_BIN)
     return images[:max_pages]
 
@@ -91,22 +113,18 @@ def image_to_data_url(img) -> str:
     return f"data:image/png;base64,{b64}"
 
 
-def _move_nombre_overflow_to_adicional(items: dict, name_limit: int = 60, adicional1_limit: int = 60, adicional2_limit: int = 60):
-    """Distribuye el overflow de `nombre` en `adicional1` y `adicional2`.
-
-    Reglas:
-    - `nombre` se corta a `name_limit`.
-    - Cualquier overflow se coloca en `adicional1` hasta su límite.
-    - Si sigue habiendo texto, va a `adicional2` hasta su límite.
-    - Se preserva el contenido existente en `adicional1` y `adicional2` cuando sea posible.
-    Modifica `items` in-place.
-    """
+def _move_nombre_overflow_to_adicional(
+    items: Dict[str, Any],
+    name_limit: int = 60,
+    adicional1_limit: int = 60,
+    adicional2_limit: int = 60
+) -> None:
     if not isinstance(items, dict):
         return
+
     columnas = items.get("columnas", [])
     datos = items.get("datos", [])
 
-    # índices esperados en nuestro formato final
     try:
         idx_nombre = columnas.index("nombre")
     except ValueError:
@@ -123,32 +141,23 @@ def _move_nombre_overflow_to_adicional(items: dict, name_limit: int = 60, adicio
     for row in datos:
         if not isinstance(row, list):
             continue
-        # Asegurar longitud suficiente
+
         while len(row) <= idx_ad2:
             row.append(None)
 
         nombre = row[idx_nombre]
-        if not isinstance(nombre, str):
-            continue
-        if len(nombre) <= name_limit:
-            # nada que mover
+        if not isinstance(nombre, str) or len(nombre) <= name_limit:
             continue
 
         overflow = nombre[name_limit:].strip()
         row[idx_nombre] = nombre[:name_limit].strip()
 
-        # Obtener existentes
         existing_ad1 = row[idx_ad1] if isinstance(row[idx_ad1], str) else ""
         existing_ad2 = row[idx_ad2] if isinstance(row[idx_ad2], str) else ""
 
-        # Si existing_ad1 tiene ya >= limit, no le añadimos más; vamos directo a ad2
         ad1_space = max(0, adicional1_limit - len(existing_ad1.strip())) if adicional1_limit else 0
 
-        to_ad1 = ""
-        to_ad2 = ""
-
         if ad1_space > 0:
-            # espacio para parte del overflow en ad1
             take = overflow[:ad1_space]
             to_ad1 = (existing_ad1.strip() + (" " + take.strip() if existing_ad1.strip() else take.strip())).strip()
             remaining = overflow[len(take):].strip()
@@ -156,11 +165,8 @@ def _move_nombre_overflow_to_adicional(items: dict, name_limit: int = 60, adicio
             to_ad1 = existing_ad1.strip() or None
             remaining = overflow
 
-        if remaining:
-            # llenar ad2 hasta su límite
-            to_ad2 = remaining[:adicional2_limit].strip() if adicional2_limit else remaining
+        to_ad2 = remaining[:adicional2_limit].strip() if remaining else None
 
-        # Asegurar los límites finales
         if isinstance(to_ad1, str) and adicional1_limit and len(to_ad1) > adicional1_limit:
             to_ad1 = to_ad1[:adicional1_limit].strip()
         if isinstance(to_ad2, str) and adicional2_limit and len(to_ad2) > adicional2_limit:
@@ -245,13 +251,7 @@ Reglas generales:
 
 # ===================== CORE =====================
 
-def groq_vision_extract(images) -> dict:
-    """
-    Procesa el PDF en batches de hasta 5 imágenes (limitación Groq)
-    y devuelve el JSON final con:
-    - documento (tomado del primer batch)
-    - items (concatenando datos de todos los batches)
-    """
+def groq_vision_extract(images) -> Dict[str, Any]:
     final_doc = {
         "ruc": None,
         "empresa": None,
@@ -268,6 +268,7 @@ def groq_vision_extract(images) -> dict:
     }
 
     batches = [images[i:i + MAX_IMAGES_PER_REQUEST] for i in range(0, len(images), MAX_IMAGES_PER_REQUEST)]
+    logger.info(f"Procesando {len(images)} páginas en {len(batches)} batch(es) (máx {MAX_IMAGES_PER_REQUEST} imgs/request)")
 
     for bi, batch in enumerate(batches):
         is_first = (bi == 0)
@@ -275,80 +276,94 @@ def groq_vision_extract(images) -> dict:
 
         content = [{"type": "text", "text": prompt_text}]
         for img in batch:
-            # IMPORTANTE: image_url debe ser objeto {url: ...} según Groq docs
-            content.append({
-                "type": "image_url",
-                "image_url": {"url": image_to_data_url(img)}
-            })
+            content.append({"type": "image_url", "image_url": {"url": image_to_data_url(img)}})
 
-        resp = client.chat.completions.create(
-            model=MODEL_VISION,
-            messages=[
-                {"role": "system", "content": "Eres un extractor de documentos. Responde SOLO JSON válido, sin markdown."},
-                {"role": "user", "content": content},
-            ],
-            temperature=0.0,
-        )
+        try:
+            resp = client.chat.completions.create(
+                model=MODEL_VISION,
+                messages=[
+                    {"role": "system", "content": "Eres un extractor de documentos. Responde SOLO JSON válido, sin markdown."},
+                    {"role": "user", "content": content},
+                ],
+                temperature=0.0,
+            )
+        except Exception as e:
+            logger.error(f"Error llamando Groq: {e}", exc_info=True)
+            raise
 
-        parsed = _safe_json_load(resp.choices[0].message.content)
+        raw = resp.choices[0].message.content or ""
+        parsed = _safe_json_load(raw)
 
-        # Merge
         if is_first and isinstance(parsed, dict) and "documento" in parsed and isinstance(parsed["documento"], dict):
             for k in final_doc.keys():
                 v = parsed["documento"].get(k, None)
                 if v is not None:
                     final_doc[k] = v
 
-        items = None
-        if isinstance(parsed, dict) and "items" in parsed and isinstance(parsed["items"], dict):
-            items = parsed["items"]
-
-        if items:
-            # columnas: respetar si vienen igual; si vienen diferentes, mantenemos las nuestras
+        items = parsed.get("items") if isinstance(parsed, dict) else None
+        if isinstance(items, dict):
             datos = items.get("datos", [])
             if isinstance(datos, list):
-                # concatenar sin agrupar
                 final_items["datos"].extend(datos)
 
-    # Post-procesar items: mover overflow de `nombre` a `adicional1`/`adicional2` si corresponde
     _move_nombre_overflow_to_adicional(final_items, name_limit=60, adicional1_limit=60, adicional2_limit=60)
-
     return {"documento": final_doc, "items": final_items}
 
 
-# ===================== ENDPOINTS =====================
+# ===================== ENDPOINTS (estilo empresa) =====================
 
-@app.route("/", methods=["GET"])
+@app.get("/home", response_class=PlainTextResponse)
+def home():
+    return "¡Bienvenido a la API!"
+
+
+@app.get("/.well-known/appspecific/com.chrome.devtools.json")
+def chrome_devtools():
+    # DevTools hace este request automáticamente; responder 204 para evitar 404 en logs
+    return Response(status_code=204)
+
+
+@app.get("/", response_class=JSONResponse)
 def index():
-    return jsonify({
+    return JSONResponse(content={
         "message": "API PDF->imagenes->Groq Vision (Llama 4) -> JSON",
         "model": MODEL_VISION,
-        "uso": "/process?pdf_url=<URL_DEL_PDF>"
+        "uso": r"/process?pdf=<NOMBRE_DEL_PDF>  (busca en O:\Publicar_Web\Ordenes_Servicio)"
     })
 
 
-@app.route("/process", methods=["GET"])
-def process_pdf():
-    pdf_url = request.args.get("pdf_url")
-    if not pdf_url:
-        return jsonify({"error": "Falta el parámetro pdf_url"}), 400
-
+@app.get("/process", response_class=JSONResponse)
+def process_pdf(
+    pdf: str = Query(..., description=r"Nombre del PDF en O:\Publicar_Web\Ordenes_Servicio")
+):
     try:
-        pdf_path = TMP_DIR / "input.pdf"
-        download_pdf(pdf_url, pdf_path)
+        # evitar path traversal — usar solo el nombre del archivo
+        pdf_name = Path(pdf).name
+        if not pdf_name.lower().endswith(".pdf"):
+            pdf_name += ".pdf"
+
+        pdf_path = PDF_BASE_DIR / pdf_name
+        if not pdf_path.exists():
+            logger.warning(f"PDF no encontrado: {pdf_path}")
+            raise HTTPException(status_code=400, detail=f"PDF no encontrado en {str(pdf_path)}")
+
+        logger.info(f"Procesando PDF: {pdf_path.name}")
 
         images = pdf_to_images(pdf_path, dpi=DPI, max_pages=MAX_PAGES)
         if not images:
-            return jsonify({"error": "No se pudieron generar imágenes del PDF."}), 500
+            logger.error("No se pudieron generar imágenes del PDF")
+            raise HTTPException(status_code=500, detail="No se pudieron generar imágenes del PDF.")
 
         data = groq_vision_extract(images)
-        return jsonify(data)
+        return JSONResponse(content=data)
 
-    except requests.RequestException as e:
-        return jsonify({"error": f"Error descargando PDF: {str(e)}"}), 400
+    except HTTPException:
+        # ya es error controlado
+        raise
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"Error procesando PDF: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Error interno al procesar el PDF")
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+# ===================== RUN =====================
+# uvicorn app_fastapi:app --host 0.0.0.0 --port 5000 --reload
