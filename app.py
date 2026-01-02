@@ -1,80 +1,51 @@
-"""
-API REST para extracción de items desde PDFs de cotizaciones.
-
-Este servicio descarga un PDF desde una URL, extrae el texto (usando OCR si es necesario),
-y utiliza el modelo LLaMA 3.3 70B de GROQ para identificar y estructurar los items
-(nombre, cantidad, precio) en formato JSON.
-
-Endpoints:
-    GET /           - Información de la API
-    GET /process    - Procesa un PDF y extrae los items
-
-Uso:
-    GET /process?pdf_url=https://ejemplo.com/cotizacion.pdf
-
-Dependencias externas:
-    - GROQ_API_KEY en archivo .env
-    - Poppler (para conversión PDF a imagen en OCR)
-    - Tesseract (para OCR)
-"""
-
 import os
 import json
 import re
+import base64
+import io
 from pathlib import Path
 from dotenv import load_dotenv
 
 import requests
-import pdfplumber
-from pdf2image import convert_from_path
-import pytesseract
-
-from openai import OpenAI
 from flask import Flask, request, jsonify
+from pdf2image import convert_from_path
+from openai import OpenAI
 
-# Cargar variables de entorno desde .env
+# ===================== CONFIG =====================
 load_dotenv()
 
-# ===================== CONFIGURACIÓN DE API =====================
-api_key = os.getenv("GROQ_API_KEY", "").strip()
-if not api_key:
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
+if not GROQ_API_KEY:
     raise SystemExit("Falta GROQ_API_KEY en tu .env")
 
-# Cliente OpenAI compatible apuntando a GROQ
-client = OpenAI(api_key=api_key, base_url="https://api.groq.com/openai/v1")
+# MODELO GROQ QUE SOPORTA IMAGENES (Vision)
+# Docs Groq: Llama 4 Scout / Maverick soportan imágenes y JSON mode
+MODEL_VISION = os.getenv(
+    "GROQ_VISION_MODEL",
+    "meta-llama/llama-4-maverick-17b-128e-instruct"
+).strip()
 
-# ===================== CONFIGURACIÓN GENERAL =====================
-MODEL = "llama-3.3-70b-versatile"  # Modelo de GROQ a utilizar
-DPI = 300                          # Resolución para conversión PDF -> imagen (OCR)
-LANG_OCR = "spa"                   # Idioma para Tesseract (spa=español, eng=inglés)
+# PDF -> imágenes
+DPI = int(os.getenv("PDF_IMG_DPI", "220"))
+MAX_PAGES = int(os.getenv("PDF_MAX_PAGES", "10"))
 
-# Ruta a binarios de Poppler (requerido para pdf2image en Windows/Conda)
+# Límite Groq Vision: máximo 5 imágenes por request
+MAX_IMAGES_PER_REQUEST = 5
+
+# Poppler (Windows/Conda)
 POPPLER_BIN = os.path.join(os.environ.get("CONDA_PREFIX", ""), "Library", "bin")
 
-# Directorio temporal para almacenar PDFs descargados
 TMP_DIR = Path("tmp")
 TMP_DIR.mkdir(exist_ok=True)
-# =================================================================
+
+# Cliente OpenAI-compatible apuntando a GROQ
+client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
 
 app = Flask(__name__)
 
-
-# ===================== FUNCIONES DE DESCARGA =====================
+# ===================== HELPERS =====================
 
 def download_pdf(url: str, out_path: Path) -> Path:
-    """
-    Descarga un PDF desde una URL y lo guarda localmente.
-
-    Args:
-        url: URL directa al archivo PDF
-        out_path: Ruta local donde guardar el archivo
-
-    Returns:
-        Path al archivo descargado
-
-    Raises:
-        requests.RequestException: Si hay error en la descarga
-    """
     r = requests.get(url, stream=True, timeout=60)
     r.raise_for_status()
     with open(out_path, "wb") as f:
@@ -84,278 +55,293 @@ def download_pdf(url: str, out_path: Path) -> Path:
     return out_path
 
 
-# ===================== FUNCIONES DE EXTRACCIÓN DE TEXTO =====================
-
-def extract_text_pdfplumber(pdf_path: Path) -> str:
-    """
-    Extrae texto de un PDF usando pdfplumber (método rápido).
-
-    Funciona bien con PDFs que tienen texto seleccionable/copiable.
-    No funciona con PDFs escaneados o basados en imágenes.
-
-    Args:
-        pdf_path: Ruta al archivo PDF
-
-    Returns:
-        Texto extraído de todas las páginas concatenado
-    """
-    parts = []
-    with pdfplumber.open(str(pdf_path)) as pdf:
-        for page in pdf.pages:
-            parts.append(page.extract_text() or "")
-    return "\n".join(parts).strip()
-
-
-def extract_text_ocr(pdf_path: Path, dpi: int = DPI) -> str:
-    """
-    Extrae texto de un PDF usando OCR (Tesseract).
-
-    Convierte cada página del PDF a imagen y luego aplica OCR.
-    Más lento pero funciona con PDFs escaneados.
-
-    Args:
-        pdf_path: Ruta al archivo PDF
-        dpi: Resolución para la conversión (mayor = mejor calidad pero más lento)
-
-    Returns:
-        Texto extraído via OCR de todas las páginas
-
-    Raises:
-        RuntimeError: Si Poppler no está instalado/configurado
-    """
+def pdf_to_images(pdf_path: Path, dpi: int = 220, max_pages: int = 10):
     if not POPPLER_BIN or not Path(POPPLER_BIN).exists():
         raise RuntimeError(
             f"Poppler no encontrado en {POPPLER_BIN}. "
             "Instala con: conda install -c conda-forge poppler"
         )
 
-    # Convertir PDF a lista de imágenes (una por página)
     images = convert_from_path(str(pdf_path), dpi=dpi, poppler_path=POPPLER_BIN)
-
-    # Aplicar OCR a cada imagen
-    parts = []
-    for img in images:
-        parts.append(pytesseract.image_to_string(img, lang=LANG_OCR))
-    return "\n".join(parts).strip()
+    return images[:max_pages]
 
 
-def is_text_sufficient(text: str) -> bool:
-    """
-    Determina si el texto extraído es suficiente y válido para una cotización.
-
-    Verifica:
-    - Longitud mínima (150 caracteres)
-    - Presencia de números (al menos 2% dígitos)
-    - Palabras clave típicas de cotizaciones
-
-    Args:
-        text: Texto a evaluar
-
-    Returns:
-        True si el texto parece ser una cotización válida, False si necesita OCR
-    """
-    if not text:
-        return False
-    t = text.strip()
-
-    # Muy corto = probablemente no extrajo bien
-    if len(t) < 150:
-        return False
-
-    # Las cotizaciones tienen números (precios, cantidades, RUC, etc.)
-    digit_ratio = sum(c.isdigit() for c in t) / max(len(t), 1)
-    if digit_ratio < 0.02:
-        return False
-
-    # Debe contener al menos una palabra clave de cotización
-    keywords = ["total", "subtotal", "igv", "precio", "cantidad", "s/", "usd", "ruc"]
-    if not any(k in t.lower() for k in keywords):
-        return False
-
-    return True
+def _strip_code_fences(s: str) -> str:
+    s = (s or "").strip()
+    s = re.sub(r"^```(?:json)?\s*", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"\s*```$", "", s)
+    return s.strip()
 
 
-def extract_text_smart(pdf_path: Path):
-    """
-    Extracción inteligente: usa pdfplumber primero, OCR solo si es necesario.
-
-    Estrategia:
-    1. Intentar extracción rápida con pdfplumber
-    2. Validar si el texto es suficiente (is_text_sufficient)
-    3. Si no es suficiente, usar OCR como fallback
-
-    Args:
-        pdf_path: Ruta al archivo PDF
-
-    Returns:
-        Tupla (texto_extraído, método_usado)
-        método_usado: "PDF_TEXT" o "OCR_FORCED"
-    """
-    t_pdf = extract_text_pdfplumber(pdf_path)
-    if is_text_sufficient(t_pdf):
-        return t_pdf, "PDF_TEXT"
-
-    # El texto extraído no es suficiente, forzar OCR
-    t_ocr = extract_text_ocr(pdf_path, dpi=DPI)
-    return t_ocr, "OCR_FORCED"
-
-
-# ===================== FUNCIONES DE PROCESAMIENTO DE TEXTO =====================
-
-def normalize_text(text: str) -> str:
-    """
-    Normaliza el texto para mejorar la extracción por el LLM.
-
-    Operaciones:
-    - Unifica saltos de línea (\\r\\n, \\r -> \\n)
-    - Elimina espacios al final de líneas
-    - Une palabras cortadas por guión al final de línea
-    - Colapsa múltiples líneas vacías
-    - Convierte saltos simples en espacios (preserva párrafos)
-    - Normaliza espacios múltiples
-    - Reemplaza caracteres especiales (ligaduras, guiones tipográficos)
-
-    Args:
-        text: Texto crudo extraído del PDF
-
-    Returns:
-        Texto normalizado y limpio
-    """
-    # Unificar saltos de línea
-    text = text.replace("\r\n", "\n").replace("\r", "\n")
-
-    # Eliminar espacios al final de cada línea
-    text = "\n".join(line.rstrip() for line in text.split("\n"))
-
-    # Unir palabras cortadas: "pala-\nbra" -> "palabra"
-    text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
-
-    # Colapsar múltiples líneas vacías a máximo 2
-    text = re.sub(r"\n{2,}", "\n\n", text)
-
-    # Convertir saltos simples en espacios, preservando párrafos (doble salto)
-    text = text.replace("\n\n", "__PARA__").replace("\n", " ").replace("__PARA__", "\n\n")
-
-    # Normalizar espacios múltiples
-    text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r" *\n\n *", "\n\n", text)
-
-    # Reemplazar caracteres especiales por sus equivalentes ASCII
-    replacements = {"ﬁ": "fi", "ﬂ": "fl", "—": "-", "–": "-", "•": "-"}
-    for a, b in replacements.items():
-        text = text.replace(a, b)
-
-    return text.strip()
-
-
-# ===================== FUNCIONES DE IA =====================
-
-def llm_extract_items(text: str) -> dict:
-    """
-    Usa el LLM (GROQ/LLaMA) para extraer items estructurados del texto.
-
-    Envía el texto normalizado al modelo con instrucciones específicas
-    para extraer nombre, cantidad y precio de cada item.
-
-    Args:
-        text: Texto normalizado de la cotización
-
-    Returns:
-        Dict con estructura: {"items": [{"nombre": str, "cantidad": num, "precio": num}, ...]}
-
-    Raises:
-        RuntimeError: Si el modelo devuelve respuesta vacía
-        json.JSONDecodeError: Si no se puede parsear la respuesta como JSON
-    """
-    prompt = f"""
-Devuelve SOLO JSON: {{"items":[{{"nombre":string,"cantidad":number,"precio":number}}]}}
-
-Reglas:
-- No inventes. Numeros con punto decimal. Sin markdown.
-- precio: usa el precio que aparece en el documento, NO dividas ni calcules.
-- Nombre: incluye TODA la info del producto (tipo, material, dimensiones, specs). Solo quita acentos y Ø->O.
-- Si el nombre tiene "20x", "100x" etc., mantenlo. NO agregues prefijos que no existan.
-- MAXIMO 60 caracteres en nombre. Si supera, quita: "MATERIAL:", "DIMENSIONES:", "UBICACION:", "SERVICIO". Conserva solo: tipo + material + medidas.
-
-Texto:
-<<<
-{text}
->>>
-""".strip()
-
-    resp = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": "Eres un extractor. Responde SOLO JSON válido, sin markdown."},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.0,  # Respuestas determinísticas
-    )
-
-    content = (resp.choices[0].message.content or "").strip()
-    if not content:
-        raise RuntimeError("Respuesta vacía del modelo.")
-
-    # Limpiar posibles bloques de código markdown que el modelo podría añadir
-    content = re.sub(r"^```(?:json)?\s*", "", content, flags=re.IGNORECASE)
-    content = re.sub(r"\s*```$", "", content)
-
-    # Intentar parsear JSON
+def _safe_json_load(s: str) -> dict:
+    s = _strip_code_fences(s)
     try:
-        return json.loads(content)
+        return json.loads(s)
     except json.JSONDecodeError:
-        # Fallback: buscar el primer objeto JSON válido en la respuesta
-        m = re.search(r"\{.*\}", content, flags=re.DOTALL)
+        m = re.search(r"\{.*\}", s, flags=re.DOTALL)
         if not m:
-            print("Respuesta cruda del modelo:\n", content)
-            raise
+            raise RuntimeError(f"Respuesta no-JSON del modelo:\n{s}")
         return json.loads(m.group(0))
 
 
-# ===================== ENDPOINTS DE LA API =====================
+def image_to_data_url(img) -> str:
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
+    return f"data:image/png;base64,{b64}"
 
-@app.route('/process', methods=['GET'])
+
+def _move_nombre_overflow_to_adicional(items: dict, name_limit: int = 60, adicional1_limit: int = 60, adicional2_limit: int = 60):
+    """Distribuye el overflow de `nombre` en `adicional1` y `adicional2`.
+
+    Reglas:
+    - `nombre` se corta a `name_limit`.
+    - Cualquier overflow se coloca en `adicional1` hasta su límite.
+    - Si sigue habiendo texto, va a `adicional2` hasta su límite.
+    - Se preserva el contenido existente en `adicional1` y `adicional2` cuando sea posible.
+    Modifica `items` in-place.
+    """
+    if not isinstance(items, dict):
+        return
+    columnas = items.get("columnas", [])
+    datos = items.get("datos", [])
+
+    # índices esperados en nuestro formato final
+    try:
+        idx_nombre = columnas.index("nombre")
+    except ValueError:
+        idx_nombre = 0
+    try:
+        idx_ad1 = columnas.index("adicional1")
+    except ValueError:
+        idx_ad1 = 4
+    try:
+        idx_ad2 = columnas.index("adicional2")
+    except ValueError:
+        idx_ad2 = idx_ad1 + 1
+
+    for row in datos:
+        if not isinstance(row, list):
+            continue
+        # Asegurar longitud suficiente
+        while len(row) <= idx_ad2:
+            row.append(None)
+
+        nombre = row[idx_nombre]
+        if not isinstance(nombre, str):
+            continue
+        if len(nombre) <= name_limit:
+            # nada que mover
+            continue
+
+        overflow = nombre[name_limit:].strip()
+        row[idx_nombre] = nombre[:name_limit].strip()
+
+        # Obtener existentes
+        existing_ad1 = row[idx_ad1] if isinstance(row[idx_ad1], str) else ""
+        existing_ad2 = row[idx_ad2] if isinstance(row[idx_ad2], str) else ""
+
+        # Si existing_ad1 tiene ya >= limit, no le añadimos más; vamos directo a ad2
+        ad1_space = max(0, adicional1_limit - len(existing_ad1.strip())) if adicional1_limit else 0
+
+        to_ad1 = ""
+        to_ad2 = ""
+
+        if ad1_space > 0:
+            # espacio para parte del overflow en ad1
+            take = overflow[:ad1_space]
+            to_ad1 = (existing_ad1.strip() + (" " + take.strip() if existing_ad1.strip() else take.strip())).strip()
+            remaining = overflow[len(take):].strip()
+        else:
+            to_ad1 = existing_ad1.strip() or None
+            remaining = overflow
+
+        if remaining:
+            # llenar ad2 hasta su límite
+            to_ad2 = remaining[:adicional2_limit].strip() if adicional2_limit else remaining
+
+        # Asegurar los límites finales
+        if isinstance(to_ad1, str) and adicional1_limit and len(to_ad1) > adicional1_limit:
+            to_ad1 = to_ad1[:adicional1_limit].strip()
+        if isinstance(to_ad2, str) and adicional2_limit and len(to_ad2) > adicional2_limit:
+            to_ad2 = to_ad2[:adicional2_limit].strip()
+
+        row[idx_ad1] = to_ad1 if to_ad1 else None
+        row[idx_ad2] = to_ad2 if to_ad2 else None
+
+
+# ===================== PROMPTS =====================
+
+BASE_RULES = """
+Devuelve SOLO JSON con esta estructura exacta:
+{
+  "documento": {
+        "ruc": string o null,
+        "empresa": string o null,
+        "codigo_factura": string o null,
+        "fecha_emision": string o null,
+        "moneda": string o null,
+        "vigencia": string o null,
+        "formato_pago": string o null,
+        "igv": number o null
+  },
+  "items": {
+        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "datos": [
+            ["valor1", numero1, numero1, "unidad1", "info extra o null", "info extra 2 o null"]
+        ]
+  }
+}
+
+Reglas para HEADER:
+- ruc: busca el RUC del EMISOR/PROVEEDOR. IMPORTANTE: El RUC 20100064571 es de NETTALCO (nosotros), NUNCA lo pongas como respuesta.
+  Si solo encuentras ese RUC, usa null.
+- empresa: nombre del proveedor/emisor. NO pongas NETTALCO.
+- codigo_factura: numero de factura / boleta / cotizacion (ej "F001-123456", "JD0007853", "FAC-000123"). Busca etiquetas como "Factura", "Boleta", "Invoice", "Cotizacion", "No.", "N°", "Serie". Si no existe, null.
+- fecha_emision: fecha de emisión del documento (ej "2023-12-31" o "31/12/2023"). Si no se puede determinar, usa null.
+- moneda: si dice "S/" o "soles" => "PEN". Si "$" o "dolares" => "USD". Si no, null.
+- vigencia: "validez", "vigencia", "oferta valida X dias", etc. Si no, null.
+- formato_pago: contado / credito / 30 dias / 60 dias / contra entrega / adelanto. Si no, null.
+- igv: MONTO en dinero (ej 180.00). NO porcentaje. Si no, null.
+
+Reglas para ITEMS:
+- nombre: NO inventes. Copia EXACTO del documento. Si no hay nombre, no incluyas item.
+- cantidad: NO inventes. Si no aparece, null. IGNORA columna "ITEM" o "Nro" (solo numeración).
+- precio: NO inventes. Debe ser PRECIO UNITARIO (P.Unit / Valor Unitario). NO total.
+- unidad: UND, KG, M, M2, GLB, HH, DIA, etc. Si no se ve, "UND".
+-- adicional1/adicional2: si el nombre supera 60 chars o hay info extra (códigos, nro máquina), ponlo aquí.
+    Usa `adicional1` primero (máx 60). Si no cabe, usa `adicional2` (máx 60). Si no, null.
+
+Reglas generales:
+- Numeros con punto decimal.
+- Sin markdown. Solo JSON válido.
+- MAXIMO 60 caracteres en nombre. Extra va en adicional.
+- NO agrupes items similares: cada fila del documento => una fila en datos.
+""".strip()
+
+CHUNK_RULES = """
+Devuelve SOLO JSON con esta estructura exacta (SOLO items, sin documento):
+{
+  "items": {
+        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "datos": [
+            ["valor1", numero1, numero1, "unidad1", "info extra o null", "info extra 2 o null"]
+        ]
+  }
+}
+
+Reglas para ITEMS:
+- nombre: NO inventes. Copia EXACTO del documento. Si no hay nombre, no incluyas item.
+- cantidad: NO inventes. Si no aparece, null. IGNORA columna "ITEM" o "Nro" (solo numeración).
+- precio: NO inventes. Debe ser PRECIO UNITARIO (P.Unit / Valor Unitario). NO total.
+- unidad: UND, KG, M, M2, GLB, HH, DIA, etc. Si no se especifica, "UND".
+- adicional1/adicional2: info extra max 60 cada uno. Usa `adicional1` primero, luego `adicional2` si hace falta.
+- NO agrupes items similares.
+
+Reglas generales:
+- Sin markdown. Solo JSON válido.
+""".strip()
+
+
+# ===================== CORE =====================
+
+def groq_vision_extract(images) -> dict:
+    """
+    Procesa el PDF en batches de hasta 5 imágenes (limitación Groq)
+    y devuelve el JSON final con:
+    - documento (tomado del primer batch)
+    - items (concatenando datos de todos los batches)
+    """
+    final_doc = {
+        "ruc": None,
+        "empresa": None,
+        "codigo_factura": None,
+        "fecha_emision": None,
+        "moneda": None,
+        "vigencia": None,
+        "formato_pago": None,
+        "igv": None
+    }
+    final_items = {
+        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "datos": []
+    }
+
+    batches = [images[i:i + MAX_IMAGES_PER_REQUEST] for i in range(0, len(images), MAX_IMAGES_PER_REQUEST)]
+
+    for bi, batch in enumerate(batches):
+        is_first = (bi == 0)
+        prompt_text = BASE_RULES if is_first else CHUNK_RULES
+
+        content = [{"type": "text", "text": prompt_text}]
+        for img in batch:
+            # IMPORTANTE: image_url debe ser objeto {url: ...} según Groq docs
+            content.append({
+                "type": "image_url",
+                "image_url": {"url": image_to_data_url(img)}
+            })
+
+        resp = client.chat.completions.create(
+            model=MODEL_VISION,
+            messages=[
+                {"role": "system", "content": "Eres un extractor de documentos. Responde SOLO JSON válido, sin markdown."},
+                {"role": "user", "content": content},
+            ],
+            temperature=0.0,
+        )
+
+        parsed = _safe_json_load(resp.choices[0].message.content)
+
+        # Merge
+        if is_first and isinstance(parsed, dict) and "documento" in parsed and isinstance(parsed["documento"], dict):
+            for k in final_doc.keys():
+                v = parsed["documento"].get(k, None)
+                if v is not None:
+                    final_doc[k] = v
+
+        items = None
+        if isinstance(parsed, dict) and "items" in parsed and isinstance(parsed["items"], dict):
+            items = parsed["items"]
+
+        if items:
+            # columnas: respetar si vienen igual; si vienen diferentes, mantenemos las nuestras
+            datos = items.get("datos", [])
+            if isinstance(datos, list):
+                # concatenar sin agrupar
+                final_items["datos"].extend(datos)
+
+    # Post-procesar items: mover overflow de `nombre` a `adicional1`/`adicional2` si corresponde
+    _move_nombre_overflow_to_adicional(final_items, name_limit=60, adicional1_limit=60, adicional2_limit=60)
+
+    return {"documento": final_doc, "items": final_items}
+
+
+# ===================== ENDPOINTS =====================
+
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({
+        "message": "API PDF->imagenes->Groq Vision (Llama 4) -> JSON",
+        "model": MODEL_VISION,
+        "uso": "/process?pdf_url=<URL_DEL_PDF>"
+    })
+
+
+@app.route("/process", methods=["GET"])
 def process_pdf():
-    """
-    Endpoint principal: procesa un PDF y extrae los items.
-
-    Query params:
-        pdf_url (str, requerido): URL directa al archivo PDF
-
-    Returns:
-        JSON con los items extraídos: {"items": [...]}
-
-    Errores:
-        400: Falta pdf_url o error descargando el PDF
-        500: Error interno en el procesamiento
-    """
-    pdf_url = request.args.get('pdf_url')
-
+    pdf_url = request.args.get("pdf_url")
     if not pdf_url:
         return jsonify({"error": "Falta el parámetro pdf_url"}), 400
 
     try:
-        # 1. Descargar el PDF
         pdf_path = TMP_DIR / "input.pdf"
         download_pdf(pdf_url, pdf_path)
 
-        # 2. Extraer texto (pdfplumber o OCR)
-        raw_text, method = extract_text_smart(pdf_path)
+        images = pdf_to_images(pdf_path, dpi=DPI, max_pages=MAX_PAGES)
+        if not images:
+            return jsonify({"error": "No se pudieron generar imágenes del PDF."}), 500
 
-        # 3. Normalizar texto
-        norm_text = normalize_text(raw_text)
-
-        print(f"\n{'='*50}")
-        print(f"Método usado: {method}")
-        print(f"Chars normalizado: {len(norm_text)}")
-        print(f"{'='*50}")
-        print("TEXTO ENVIADO AL LLM:")
-        print(norm_text[:1000])  # Primeros 1000 chars
-        print(f"{'='*50}")
-
-        # 4. Extraer items con IA
-        data = llm_extract_items(norm_text)
-
+        data = groq_vision_extract(images)
         return jsonify(data)
 
     except requests.RequestException as e:
@@ -364,23 +350,5 @@ def process_pdf():
         return jsonify({"error": str(e)}), 500
 
 
-@app.route('/', methods=['GET'])
-def index():
-    """
-    Endpoint raíz: información básica de la API.
-
-    Returns:
-        JSON con mensaje de bienvenida e instrucciones de uso
-    """
-    return jsonify({
-        "message": "API de extracción de items de PDF",
-        "uso": "/process?pdf_url=<URL_DEL_PDF>"
-    })
-
-
-# ===================== PUNTO DE ENTRADA =====================
-
 if __name__ == "__main__":
-    # Iniciar servidor Flask en modo desarrollo
-    # host='0.0.0.0' permite conexiones externas
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
