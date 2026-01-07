@@ -85,7 +85,7 @@ GET /home
 GET /
 
 ### Procesar PDF
-GET /process?pdf=archivo.pdf
+GET /process?pdf=nombre_del_pdf 
 
 ---
 
