@@ -62,3 +62,39 @@
 2026-01-02 13:26:10 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
 2026-01-02 13:26:10 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
 2026-01-02 13:27:30 | INFO | 🛑 API detenida
+2026-01-02 13:35:04 | INFO | 🚀 API iniciada
+2026-01-02 13:35:04 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-02 13:35:04 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-02 13:35:14 | INFO | Procesando PDF: 2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf
+2026-01-02 13:35:14 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:35:32 | INFO | Procesando PDF: 2025009719-PORRAS_E001-12.pdf
+2026-01-02 13:35:33 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-02 13:37:07 | INFO | Procesando PDF: 2025009616-MV.CT.25781A_NETTALCO_-_Control_de_Calidad_Tejeduria_-_MPI.pdf
+2026-01-02 13:37:07 | INFO | Procesando 2 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:37:34 | INFO | 🚀 API iniciada
+2026-01-05 11:37:34 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-05 11:37:34 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
+2026-01-05 11:40:29 | INFO | Procesando PDF: 2026000039-PERCY_VALVERDE_TIZ_RNS.pdf
+2026-01-05 11:40:30 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:41:33 | INFO | Procesando PDF: 2026000033-PDF-DOC-E001-27820606845007.pdf
+2026-01-05 11:41:33 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:41:36 | INFO | Procesando PDF: 2026000033-PDF-DOC-E001-27820606845007.pdf
+2026-01-05 11:41:37 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:42:12 | INFO | Procesando PDF: 2025009669-ZAMBRANO_E001-15.pdf
+2026-01-05 11:42:12 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:43:12 | INFO | Procesando PDF: 2025009601-MV.CT.25754_NETTALCO_-_Estampadora_C9_C11_-_Ducto_(2).pdf
+2026-01-05 11:43:12 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:44:04 | INFO | Procesando PDF: 2025009601-MV.CT.25754_NETTALCO_-_Estampadora_C9_C11_-_Ducto_(2).pdf
+2026-01-05 11:44:05 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:47:25 | INFO | Procesando PDF: 2025009509-PDF-DOC-E001-4229420600912225.pdf
+2026-01-05 11:47:26 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:53:53 | INFO | Procesando PDF: 2025009601-MV.CT.25754_NETTALCO_-_Estampadora_C9_C11_-_Ducto_(2).pdf
+2026-01-05 11:53:53 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:56:42 | INFO | Procesando PDF: 2025009509-PDF-DOC-E001-4229420600912225.pdf
+2026-01-05 11:56:43 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-05 11:56:44 | INFO | Procesando PDF: 2025009509-PDF-DOC-E001-4229420600912225.pdf
+2026-01-05 11:56:45 | INFO | Procesando 1 páginas en 1 batch(es) (máx 5 imgs/request)
+2026-01-06 10:04:46 | INFO | 🛑 API detenida
+2026-01-06 10:04:55 | INFO | 🚀 API iniciada
+2026-01-06 10:04:55 | INFO | Modelo: meta-llama/llama-4-maverick-17b-128e-instruct
+2026-01-06 10:04:55 | INFO | PDF_BASE_DIR: O:\Publicar_Web\Ordenes_Servicio
