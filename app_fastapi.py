@@ -1,21 +1,21 @@
 # app_fastapi.py
 # API PDF -> imágenes -> Groq Vision (Llama 4) -> JSON
-# Estándar Nettalco/Planeamiento: FastAPI + Loguru + HTTPException + JSONResponse + Startup/Shutdown
+# Estándar Nettalco/Planeamiento: FastAPI + Loguru + JSONResponse
 
 import os
 import json
 import re
 import base64
 import io
-from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 from dotenv import load_dotenv
 from loguru import logger
 
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import PlainTextResponse, JSONResponse, Response
+from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse, JSONResponse
+from pydantic import BaseModel
 
 from pdf2image import convert_from_path
 from openai import OpenAI
@@ -24,7 +24,6 @@ from openai import OpenAI
 # ===================== CONFIG =====================
 load_dotenv()
 
-# ---- Logging corporativo ----
 logger.add(
     "serverAPI.log",
     format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
@@ -35,24 +34,22 @@ logger.add(
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
 if not GROQ_API_KEY:
-    raise SystemExit("Falta GROQ_API_KEY en tu .env")
+    raise SystemExit("❌ Falta GROQ_API_KEY en tu .env")
 
 MODEL_VISION = os.getenv(
     "GROQ_VISION_MODEL",
     "meta-llama/llama-4-maverick-17b-128e-instruct"
 ).strip()
 
-DPI = int(os.getenv("PDF_IMG_DPI"))
-MAX_PAGES = int(os.getenv("PDF_MAX_PAGES"))
+DPI = int(os.getenv("PDF_IMG_DPI", "200"))
+MAX_PAGES = int(os.getenv("PDF_MAX_PAGES", "5"))
 MAX_IMAGES_PER_REQUEST = 5
 
-POPPLER_BIN = os.path.join(os.environ.get("CONDA_PREFIX", ""), "Library", "bin")
+BASE_DIR = Path(__file__).resolve().parent
+POPPLER_BIN = BASE_DIR / "poppler-25.12.0" / "Library" / "bin"
 
-PDF_BASE_DIR = Path(os.getenv("PDF_BASE_DIR"))
-TMP_DIR = Path("tmp")
-TMP_DIR.mkdir(exist_ok=True)
+PDF_BASE_DIR = Path(os.getenv("PDF_BASE_DIR", "O:/Publicar_Web/Ordenes_Servicio"))
 
-# Cliente OpenAI-compatible apuntando a GROQ
 client = OpenAI(api_key=GROQ_API_KEY, base_url="https://api.groq.com/openai/v1")
 
 
@@ -66,10 +63,11 @@ app = FastAPI(
 
 @app.on_event("startup")
 async def startup():
-    # En tu estándar, se acostumbra tener startup/shutdown aunque aquí no haya DB async.
     logger.info("🚀 API iniciada")
     logger.info(f"Modelo: {MODEL_VISION}")
     logger.info(f"PDF_BASE_DIR: {PDF_BASE_DIR}")
+    logger.info(f"Existe base dir?: {PDF_BASE_DIR.exists()}")
+    logger.info(f"Poppler path: {POPPLER_BIN}")
 
 
 @app.on_event("shutdown")
@@ -77,15 +75,29 @@ async def shutdown():
     logger.info("🛑 API detenida")
 
 
+# ===================== MODELS =====================
+
+class ProcessRequest(BaseModel):
+    pdf: str
+
+
 # ===================== HELPERS =====================
 
 def pdf_to_images(pdf_path: Path, dpi: int, max_pages: int):
-    if not POPPLER_BIN or not Path(POPPLER_BIN).exists():
-        raise RuntimeError(
-            f"Poppler no encontrado en {POPPLER_BIN}. "
-            "Instala con: conda install -c conda-forge poppler"
+    logger.info(f"Usando POPPLER_BIN: {POPPLER_BIN}")
+
+    if not POPPLER_BIN.exists():
+        raise RuntimeError(f"❌ Poppler NO encontrado en: {POPPLER_BIN}")
+
+    try:
+        images = convert_from_path(
+            str(pdf_path),
+            dpi=dpi,
+            poppler_path=str(POPPLER_BIN)
         )
-    images = convert_from_path(str(pdf_path), dpi=dpi, poppler_path=POPPLER_BIN)
+    except Exception as e:
+        raise RuntimeError(f"❌ Error en convert_from_path: {e}")
+
     return images[:max_pages]
 
 
@@ -114,69 +126,6 @@ def image_to_data_url(img) -> str:
     return f"data:image/png;base64,{b64}"
 
 
-def _move_nombre_overflow_to_adicional(
-    items: Dict[str, Any],
-    name_limit: int = 60,
-    adicional1_limit: int = 60,
-    adicional2_limit: int = 60
-) -> None:
-    if not isinstance(items, dict):
-        return
-
-    columnas = items.get("columnas", [])
-    datos = items.get("datos", [])
-
-    try:
-        idx_nombre = columnas.index("nombre")
-    except ValueError:
-        idx_nombre = 0
-    try:
-        idx_ad1 = columnas.index("adicional1")
-    except ValueError:
-        idx_ad1 = 4
-    try:
-        idx_ad2 = columnas.index("adicional2")
-    except ValueError:
-        idx_ad2 = idx_ad1 + 1
-
-    for row in datos:
-        if not isinstance(row, list):
-            continue
-
-        while len(row) <= idx_ad2:
-            row.append(None)
-
-        nombre = row[idx_nombre]
-        if not isinstance(nombre, str) or len(nombre) <= name_limit:
-            continue
-
-        overflow = nombre[name_limit:].strip()
-        row[idx_nombre] = nombre[:name_limit].strip()
-
-        existing_ad1 = row[idx_ad1] if isinstance(row[idx_ad1], str) else ""
-        existing_ad2 = row[idx_ad2] if isinstance(row[idx_ad2], str) else ""
-
-        ad1_space = max(0, adicional1_limit - len(existing_ad1.strip())) if adicional1_limit else 0
-
-        if ad1_space > 0:
-            take = overflow[:ad1_space]
-            to_ad1 = (existing_ad1.strip() + (" " + take.strip() if existing_ad1.strip() else take.strip())).strip()
-            remaining = overflow[len(take):].strip()
-        else:
-            to_ad1 = existing_ad1.strip() or None
-            remaining = overflow
-
-        to_ad2 = remaining[:adicional2_limit].strip() if remaining else None
-
-        if isinstance(to_ad1, str) and adicional1_limit and len(to_ad1) > adicional1_limit:
-            to_ad1 = to_ad1[:adicional1_limit].strip()
-        if isinstance(to_ad2, str) and adicional2_limit and len(to_ad2) > adicional2_limit:
-            to_ad2 = to_ad2[:adicional2_limit].strip()
-
-        row[idx_ad1] = to_ad1 if to_ad1 else None
-        row[idx_ad2] = to_ad2 if to_ad2 else None
-
-
 # ===================== PROMPTS =====================
 
 BASE_RULES = """
@@ -193,59 +142,37 @@ Devuelve SOLO JSON con esta estructura exacta:
         "igv": number o null
   },
   "items": {
-        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "columnas": ["nombre", "cantidad", "precio", "unidad"],
         "datos": [
-            ["valor1", numero1, numero1, "unidad1", "info extra o null", "info extra 2 o null"]
+            ["valor1", numero1, numero1, "unidad1"]
         ]
   }
 }
 
-Reglas para HEADER:
-- ruc: busca el RUC del EMISOR/PROVEEDOR. IMPORTANTE: El RUC 20100064571 es de NETTALCO (nosotros), NUNCA lo pongas como respuesta.
-  Si solo encuentras ese RUC, usa null.
-- empresa: nombre del proveedor/emisor. NO pongas NETTALCO.
-- codigo_factura: numero de factura / boleta / cotizacion (ej "F001-123456", "JD0007853", "FAC-000123"). Busca etiquetas como "Factura", "Boleta", "Invoice", "Cotizacion", "No.", "N°", "Serie". Si no existe, null.
-- fecha_emision: fecha de emisión del documento (ej "2023-12-31" o "31/12/2023"). Si no se puede determinar, usa null.
-- moneda: si dice "S/" o "soles" => "PEN". Si "$" o "dolares" => "USD". Si no, null.
-- vigencia: "validez", "vigencia", "oferta valida X dias", etc. Si no, null.
-- formato_pago: contado / credito / 30 dias / 60 dias / contra entrega / adelanto. Si no, null.
-- igv: MONTO en dinero (ej 180.00). NO porcentaje. Si no, null.
-
-Reglas para ITEMS:
-- nombre: NO inventes. Copia EXACTO del documento. Si no hay nombre, no incluyas item.
-- cantidad: NO inventes. Si no aparece, null. IGNORA columna "ITEM" o "Nro" (solo numeración).
-- precio: NO inventes. Debe ser PRECIO UNITARIO (P.Unit / Valor Unitario). NO total.
-- unidad: UND, KG, M, M2, GLB, HH, DIA, etc. Si no se ve, "UND".
--- adicional1/adicional2: si el nombre supera 60 chars o hay info extra (códigos, nro máquina), ponlo aquí.
-    Usa `adicional1` primero (máx 60). Si no cabe, usa `adicional2` (máx 60). Si no, null.
-
-Reglas generales:
-- Numeros con punto decimal.
+Reglas:
+- NO inventes datos.
+- Copia el nombre COMPLETO tal como aparece en el documento.
+- cantidad: si no aparece, null.
+- precio: debe ser PRECIO UNITARIO, no total.
+- unidad: UND, KG, M, M2, GLB, HH, DIA. Si no se ve, "UND".
 - Sin markdown. Solo JSON válido.
-- MAXIMO 60 caracteres en nombre. Extra va en adicional.
-- NO agrupes items similares: cada fila del documento => una fila en datos.
 """.strip()
 
 CHUNK_RULES = """
-Devuelve SOLO JSON con esta estructura exacta (SOLO items, sin documento):
+Devuelve SOLO JSON con esta estructura exacta (SOLO items):
 {
   "items": {
-        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "columnas": ["nombre", "cantidad", "precio", "unidad"],
         "datos": [
-            ["valor1", numero1, numero1, "unidad1", "info extra o null", "info extra 2 o null"]
+            ["valor1", numero1, numero1, "unidad1"]
         ]
   }
 }
 
-Reglas para ITEMS:
-- nombre: NO inventes. Copia EXACTO del documento. Si no hay nombre, no incluyas item.
-- cantidad: NO inventes. Si no aparece, null. IGNORA columna "ITEM" o "Nro" (solo numeración).
-- precio: NO inventes. Debe ser PRECIO UNITARIO (P.Unit / Valor Unitario). NO total.
-- unidad: UND, KG, M, M2, GLB, HH, DIA, etc. Si no se especifica, "UND".
-- adicional1/adicional2: info extra max 60 cada uno. Usa `adicional1` primero, luego `adicional2` si hace falta.
-- NO agrupes items similares.
-
-Reglas generales:
+Reglas:
+- NO inventes datos.
+- Copia el nombre COMPLETO.
+- precio es UNITARIO, no total.
 - Sin markdown. Solo JSON válido.
 """.strip()
 
@@ -263,13 +190,14 @@ def groq_vision_extract(images) -> Dict[str, Any]:
         "formato_pago": None,
         "igv": None
     }
+
     final_items = {
-        "columnas": ["nombre", "cantidad", "precio", "unidad", "adicional1", "adicional2"],
+        "columnas": ["nombre", "cantidad", "precio", "unidad"],
         "datos": []
     }
 
     batches = [images[i:i + MAX_IMAGES_PER_REQUEST] for i in range(0, len(images), MAX_IMAGES_PER_REQUEST)]
-    logger.info(f"Procesando {len(images)} páginas en {len(batches)} batch(es) (máx {MAX_IMAGES_PER_REQUEST} imgs/request)")
+    logger.info(f"Procesando {len(images)} páginas en {len(batches)} batch(es)")
 
     for bi, batch in enumerate(batches):
         is_first = (bi == 0)
@@ -279,91 +207,94 @@ def groq_vision_extract(images) -> Dict[str, Any]:
         for img in batch:
             content.append({"type": "image_url", "image_url": {"url": image_to_data_url(img)}})
 
-        try:
-            resp = client.chat.completions.create(
-                model=MODEL_VISION,
-                messages=[
-                    {"role": "system", "content": "Eres un extractor de documentos. Responde SOLO JSON válido, sin markdown."},
-                    {"role": "user", "content": content},
-                ],
-                temperature=0.0,
-            )
-        except Exception as e:
-            logger.error(f"Error llamando Groq: {e}", exc_info=True)
-            raise
+        resp = client.chat.completions.create(
+            model=MODEL_VISION,
+            messages=[
+                {"role": "system", "content": "Eres un extractor de documentos. Responde SOLO JSON válido."},
+                {"role": "user", "content": content},
+            ],
+            temperature=0.0,
+        )
 
         raw = resp.choices[0].message.content or ""
         parsed = _safe_json_load(raw)
 
-        if is_first and isinstance(parsed, dict) and "documento" in parsed and isinstance(parsed["documento"], dict):
+        if is_first and "documento" in parsed:
             for k in final_doc.keys():
-                v = parsed["documento"].get(k, None)
-                if v is not None:
-                    final_doc[k] = v
+                if parsed["documento"].get(k) is not None:
+                    final_doc[k] = parsed["documento"][k]
 
-        items = parsed.get("items") if isinstance(parsed, dict) else None
+        items = parsed.get("items")
         if isinstance(items, dict):
             datos = items.get("datos", [])
             if isinstance(datos, list):
                 final_items["datos"].extend(datos)
 
-    _move_nombre_overflow_to_adicional(final_items, name_limit=60, adicional1_limit=60, adicional2_limit=60)
     return {"documento": final_doc, "items": final_items}
 
 
-# ===================== ENDPOINTS (estilo empresa) =====================
+# ===================== ENDPOINTS =====================
 
 @app.get("/home", response_class=PlainTextResponse)
 def home():
-    return "¡Bienvenido a la API!"
+    return "OK - API en línea"
 
 
-@app.get("/.well-known/appspecific/com.chrome.devtools.json")
-def chrome_devtools():
-    # DevTools hace este request automáticamente; responder 204 para evitar 404 en logs
-    return Response(status_code=204)
-
-
-@app.get("/", response_class=JSONResponse)
-def index():
-    return JSONResponse(content={
-        "message": "API PDF->imagenes->Groq Vision (Llama 4) -> JSON",
-        "model": MODEL_VISION,
-        "uso": r"/process?pdf=<NOMBRE_DEL_PDF>  (busca en O:\Publicar_Web\Ordenes_Servicio)"
-    })
-
-
-@app.get("/process", response_class=JSONResponse)
-def process_pdf(
-    pdf: str = Query(..., description=r"Nombre del PDF en O:\Publicar_Web\Ordenes_Servicio")
-):
+@app.post("/process", response_class=JSONResponse)
+def process_pdf(req: ProcessRequest):
     try:
-        # evitar path traversal — usar solo el nombre del archivo
-        pdf_name = Path(pdf).name
+        pdf_name = Path(req.pdf).name
         if not pdf_name.lower().endswith(".pdf"):
             pdf_name += ".pdf"
 
         pdf_path = PDF_BASE_DIR / pdf_name
+
+        logger.info("========== DEBUG PROCESS ==========")
+        logger.info(f"PDF recibido        : {req.pdf}")
+        logger.info(f"PDF normalizado     : {pdf_name}")
+        logger.info(f"PDF_BASE_DIR        : {PDF_BASE_DIR}")
+        logger.info(f"Ruta completa       : {pdf_path}")
+        logger.info(f"Existe base dir?    : {PDF_BASE_DIR.exists()}")
+        logger.info(f"Existe archivo?     : {pdf_path.exists()}")
+
+        if not PDF_BASE_DIR.exists():
+            raise RuntimeError(f"❌ La carpeta base NO existe: {PDF_BASE_DIR}")
+
         if not pdf_path.exists():
-            logger.warning(f"PDF no encontrado: {pdf_path}")
-            raise HTTPException(status_code=400, detail=f"PDF no encontrado en {str(pdf_path)}")
+            raise RuntimeError(f"❌ El PDF NO existe: {pdf_path}")
 
-        logger.info(f"Procesando PDF: {pdf_path.name}")
-
+        # --- PDF a imágenes ---
+        logger.info("Convirtiendo PDF a imágenes...")
         images = pdf_to_images(pdf_path, dpi=DPI, max_pages=MAX_PAGES)
+        logger.info(f"Imágenes generadas  : {len(images)}")
+
         if not images:
-            logger.error("No se pudieron generar imágenes del PDF")
-            raise HTTPException(status_code=500, detail="No se pudieron generar imágenes del PDF.")
+            raise RuntimeError("❌ pdf_to_images devolvió lista vacía")
 
+        # --- Groq Vision ---
+        logger.info("Enviando a Groq Vision...")
         data = groq_vision_extract(images)
-        return JSONResponse(content=data)
+        logger.info("Respuesta de Groq OK")
 
-    except HTTPException:
-        # ya es error controlado
-        raise
+        return JSONResponse(content={
+            "status": "ok",
+            "debug": {
+                "pdf_path": str(pdf_path),
+                "images": len(images)
+            },
+            "data": data
+        })
+
     except Exception as e:
-        logger.error(f"Error procesando PDF: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Error interno al procesar el PDF")
+        logger.error("🔥 ERROR REAL EN PROCESS 🔥", exc_info=True)
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "error_type": type(e).__name__,
+                "error_message": str(e)
+            }
+        )
 
 
 # ===================== RUN =====================
