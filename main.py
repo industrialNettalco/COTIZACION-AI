@@ -437,7 +437,11 @@ login_sessions: Dict[str, requests.Session] = {}
 async def lifespan(app: FastAPI):
     global claude_session
     logger.info("Iniciando API...")
-    claude_session = ClaudeAPISession()
+    try:
+        claude_session = ClaudeAPISession()
+    except FileNotFoundError:
+        logger.warning("No se encontraron cookies. Usa /auth/send-code para autenticarte primero.")
+        claude_session = None
     yield
 
 app = FastAPI(
@@ -465,6 +469,9 @@ app.add_middleware(
 @app.post("/chat/file", response_model=ChatResponse, tags=["Chat"])
 async def chat_file_endpoint(file: UploadFile = File(...)):
     """Procesa un PDF subido directamente"""
+    if claude_session is None:
+        raise HTTPException(status_code=503, detail="No autenticado. Usa /auth/send-code primero.")
+
     try:
         if not file.filename.lower().endswith('.pdf'):
             raise HTTPException(status_code=400, detail="Solo PDF")
@@ -495,6 +502,9 @@ async def chat_file_endpoint(file: UploadFile = File(...)):
 @app.post("/chat/orden/{nombre_pdf}", response_model=ChatResponse, tags=["Chat"])
 async def chat_orden_endpoint(nombre_pdf: str):
     """Procesa un PDF desde O:\\Publicar_Web\\Ordenes_Servicio por nombre"""
+    if claude_session is None:
+        raise HTTPException(status_code=503, detail="No autenticado. Usa /auth/send-code primero.")
+
     try:
         if not nombre_pdf.lower().endswith('.pdf'):
             nombre_pdf = f"{nombre_pdf}.pdf"

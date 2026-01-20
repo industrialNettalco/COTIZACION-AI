@@ -6,7 +6,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY main.py login_api.py claude_cookies_selenium.json ./
+COPY main.py login_api.py ./
+# Copiar cookies si existen (opcional)
+COPY claude_cookies_selenium.jso[n] ./
 
 EXPOSE 8001
 
