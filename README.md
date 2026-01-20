@@ -1,110 +1,114 @@
-# cotizacion-ai
+# COTIZACION-AI
 
-## 📄 Descripción
-**cotizacion-ai** es una API desarrollada con **FastAPI** que permite procesar archivos PDF de cotizaciones, convertirlos a imágenes y utilizar modelos **Groq Vision (Llama 4)** para extraer información estructurada del documento.
+API para procesar PDFs de facturas/cotizaciones usando Claude AI.
 
-La API retorna un **JSON estandarizado** con:
-- Datos del encabezado del documento (empresa, RUC, factura, moneda, IGV, etc.).
-- Detalle de ítems (nombre, cantidad, precio unitario, unidad y adicionales).
+## Requisitos
 
-El proyecto está alineado con los **Estándares de Desarrollo del Área de Planeamiento**.
-
----
-
-## 🎯 Objetivos
-- Automatizar la lectura de cotizaciones en PDF.
-- Reducir errores manuales en el registro de información.
-- Estandarizar la salida de datos para integraciones internas.
-- Facilitar la mantenibilidad y escalabilidad del servicio.
-
----
-
-## 🧱 Tecnologías utilizadas
 - Python 3.10+
-- FastAPI
-- Uvicorn
-- Groq API (Vision – Llama 4)
-- pdf2image + Poppler
-- Loguru
-- python-dotenv
+- Archivo `claude_cookies_selenium.json` con cookies válidas de Claude
 
----
+## Instalación
 
-## 📁 Estructura del proyecto
-```
-cotizacion-ai/
-├── app_fastapi.py
-├── requirements.txt
-├── README.md
-├── .env.example
-├── tmp/
-└── serverAPI.log
-```
-
----
-
-## ⚙️ Configuración del entorno
-
-### Crear entorno virtual
-```
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Instalar dependencias
-```
+```bash
 pip install -r requirements.txt
 ```
 
-### Variables de entorno
-Crear archivo `.env` (no versionado):
+## Iniciar el servidor
 
-```
-GROQ_API_KEY=your_groq_api_key_here
-GROQ_VISION_MODEL=meta-llama/llama-4-maverick-17b-128e-instruct
-PDF_IMG_DPI=220
-PDF_MAX_PAGES=10
-PDF_BASE_DIR=O:\Publicar_Web\Ordenes_Servicio
+```bash
+python main.py
 ```
 
+El servidor estará disponible en `http://localhost:8001`
+
 ---
 
-## ▶️ Ejecución
+## Pasos para usar la API
+
+### 1. Autenticación (Primera vez o cookies expiradas)
+
+#### Paso 1: Solicitar código de verificación
+
+```bash
+POST /auth/send-code
+Content-Type: application/json
+
+{
+  "email": "tu_email@ejemplo.com"
+}
 ```
-uvicorn app_fastapi:app --host 0.0.0.0 --port 5000 --reload
+
+#### Paso 2: Verificar código recibido por email
+
+```bash
+POST /auth/verify-code
+Content-Type: application/json
+
+{
+  "email": "tu_email@ejemplo.com",
+  "code": "123456"
+}
+```
+
+Esto guarda las cookies en `claude_cookies_selenium.json` y recarga la sesión automáticamente.
+
+### 2. Procesar PDFs
+
+#### Opción A: Subir archivo directamente
+
+```bash
+POST /chat/file
+Content-Type: multipart/form-data
+
+file: [archivo.pdf]
+```
+
+#### Opción B: Procesar desde ruta de red (Ordenes)
+
+```bash
+POST /chat/orden/{nombre_pdf}
+```
+
+Busca el PDF en `O:\Publicar_Web\Ordenes_Servicio\`
+
+---
+
+## Endpoints
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| POST | `/auth/send-code` | Envía código de verificación al email |
+| POST | `/auth/verify-code` | Verifica código y guarda cookies |
+| POST | `/auth/reload-session` | Recarga sesión desde cookies guardadas |
+| POST | `/chat/file` | Procesa PDF subido |
+| POST | `/chat/orden/{nombre_pdf}` | Procesa PDF desde carpeta de órdenes |
+| GET | `/health` | Estado de la API |
+
+---
+
+## Respuesta de procesamiento
+
+```json
+{
+  "documento": {
+    "moneda": "SOLES",
+    "ruc": "20190143806",
+    "proveedor": "EMPRESA S.A.C.",
+    "codigo_factura": "F001-001234",
+    "fecha_emision": "15/01/2026",
+    "forma_pago": "Credito",
+    "igv": true,
+    "sub_total": "100.00",
+    "total": "118.00"
+  },
+  "tiempo_respuesta": 5.23,
+  "intentos": 1
+}
 ```
 
 ---
 
-## 🔌 Endpoints
+## Documentación interactiva
 
-### Home
-GET /home
-
-### Información
-GET /
-
-### Procesar PDF
-GET /process?pdf=archivo.pdf
-
----
-
-## 🪵 Logging
-- Archivo: serverAPI.log
-- Nivel: INFO
-- Rotación automática
-
----
-
-## 🔐 Seguridad
-- Variables sensibles en `.env`
-- `.env` ignorado por Git
-- Accesos controlados por responsables del área
-
----
-
-## 🚀 Pase a Producción
-- Prueba flujo principal (2 veces)
-- Prueba flujos secundarios
-- Revisión de código
-- Validación con PO y Jefaturas
+- Swagger UI: `http://localhost:8001/docs`
+- ReDoc: `http://localhost:8001/redoc`
