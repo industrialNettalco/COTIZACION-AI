@@ -1,0 +1,1976 @@
+{
+  "revisiones": [
+    {
+      "pedido": "2026000178",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000178-SAUL_381.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "API",
+          "notas": "Ambos estan en la correcto solo que uno no saca el igv y el otro si a pesar que en el documento dice que no se cuenta igv"
+        },
+        {
+          "campo": "total",
+          "valor_csv": "826",
+          "valor_api": "700.00",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000176",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000176-TORRES_448.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "413",
+          "valor_api": "350.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000175",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000175-TORRES_447.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "472",
+          "valor_api": "400.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000174",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000174-TORRES_446.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "1500",
+          "valor_api": "1900.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1770",
+          "valor_api": "1900.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000173",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000173-TORRES_446.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_ESPECIAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "120",
+          "valor_api": "1900.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "141.6",
+          "valor_api": "1900.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000170",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000170-TRANSERVIS_E001-485.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "sub_total",
+          "valor_csv": "450",
+          "valor_api": "500.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "531",
+          "valor_api": "590.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000161",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000161-TORRES_445.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "413",
+          "valor_api": "350.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000143",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000143-REP_011_-_26_-_INDUSTRIAS_NETTALCO_S.A.C._-_MOTOR_DE_PUERTA.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20510731698",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000133",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000133-MV.CT.26005_NETTALCO_-_Estampadora_C6_C7_-_Fuga.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000132",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000132-MV.CT.26002_NETTALCO_-_Estampadora_C9_C10_-_Rejilla.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000131",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000131-MV.CT.26006_NETTALCO_-_Estampadora_K32.3_C10_-_Compresor.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000126",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000126-Mod_-_053_-_25_-_elevador_personal.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20510731698",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000121",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000121-ALIAGA_001-345.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESPECIAL",
+      "campos_revisados": [
+        {
+          "campo": "sub_total",
+          "valor_csv": "450",
+          "valor_api": "750.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "531",
+          "valor_api": "885.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000120",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000120-ALIAGA_001-344.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESPECIAL",
+      "campos_revisados": [
+        {
+          "campo": "sub_total",
+          "valor_csv": "200",
+          "valor_api": "280.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "236",
+          "valor_api": "330.40",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000110",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000110-JIREH.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "WILFREDO HOLGUIN AREVALO",
+          "valor_api": "SERVICIOS GENERALES JIREH",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NINGUNO",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000078",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000078-20101362702-01-F014-3865.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "moneda",
+          "valor_csv": "",
+          "valor_api": "DOLARES",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "ruc",
+          "valor_csv": "20418108151",
+          "valor_api": "20101362702",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "proveedor",
+          "valor_csv": "HIALPESA",
+          "valor_api": "Confecciones Textimax S.A.",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "",
+          "valor_api": "1390.80",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "",
+          "valor_api": "1641.14",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000068",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000068-TEÑIDO_HILO_HIALPESA-06.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20418108151",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "8146.8",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "9613.23",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000043",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000043-N443.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1180",
+          "valor_api": "1000.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000039",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000039-PERCY_VALVERDE_TIZ_RNS.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10069501082",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000014",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000014-COTIZACION_NETTALCO_25-170.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "sub_total",
+          "valor_csv": "240",
+          "valor_api": "120.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "283.2",
+          "valor_api": "141.60",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000013",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000013-COTIZACION_NETTALCO_25-171.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "total",
+          "valor_csv": "365.8",
+          "valor_api": "375.24",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000012",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000012-N442.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "472",
+          "valor_api": "400.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2026000010",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000010-N441.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "531",
+          "valor_api": "450.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009773",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009773-CamScanner_30-12-2025_19.09.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "sub_total",
+          "valor_csv": "421.2",
+          "valor_api": "1521.00",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "497.02",
+          "valor_api": "1794.78",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009767",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009767-COT_0551.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20613573047",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1062",
+          "valor_api": "900.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009766",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009766-COT_0550_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20613573047",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1191.8",
+          "valor_api": "1010.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009765",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009765-LEOTEX_1067.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10101536411",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009764",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009764-367.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "MANIOBRAS DE MAXIMILA ZAMORA CHAVEZ",
+          "valor_api": "Maximila Zamora Chávez",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "280",
+          "valor_api": "360.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "330.4",
+          "valor_api": "360.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009763",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009763-PRESUPUESTO_Nº_1214-TRANSFORMADOR_DE_RECTILINEOS.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20110901331",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009762",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009762-LIQUIDACION_NETTALCO_centrador_de_tela.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "165.2",
+          "valor_api": "140.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009761",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009761-LIQUIDACION_NETTALCO_Pablo_Baldoceda_26387_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "212.4",
+          "valor_api": "180.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009749",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009749-APOYOS_DICIEMBRE_NETTALCO_VULCANO.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20265658475",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "911.34",
+          "valor_api": "772.32",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009748",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009748-HHEE_DICIEMBRE_NETTALCO_VULCANO.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20265658475",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "5925.11",
+          "valor_api": "5021.28",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009744",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009744-VALORIZACION_ENERO_2026_NETTALCO_VULCANO.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "total",
+          "valor_csv": "39892.96",
+          "valor_api": "39892.95",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009740",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009740-COTIZACIÓN_DE_MANTENIMIENTO_PARA_BORDADORA_DE_10_CABEZAS.docx_(2).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10721035188",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "proveedor",
+          "valor_csv": "LOPEZ VASQUEZ EDWIN GIANFRANCO",
+          "valor_api": "Edwin Gianfranco López Vásquez",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1357",
+          "valor_api": "1150.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009726",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009726-MICRAM_544.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20613573047",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "413",
+          "valor_api": "350.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009721",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009721-COTZ_RYR_3431-2025_NETTALCO_IIEE_NUEVO_CALDERO_DE_ACEITE_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20536354825",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "10551.56",
+          "valor_api": "8942.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009720",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009720-Cot._correctivo_b.c.i_valvula_test_drain_-_nettalco_vulcano_SG_-157.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20612828572",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "proveedor",
+          "valor_csv": "JVRS SOLSETEG GROUP E.I.R.L.",
+          "valor_api": "SOLUCIONES SERVICIOS TECNICOS BOMBAS GENERAL",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009719",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009719-PORRAS_E001-12.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "413",
+          "valor_api": "350.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009695",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009695-CAIMSO_532.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "236",
+          "valor_api": "200.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009694",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009694-CAIMSO_533.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "236",
+          "valor_api": "200.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009693",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009693-CAIMSO_534.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "312.7",
+          "valor_api": "265.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009692",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009692-CAIMSO_535.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "94.4",
+          "valor_api": "80.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009691",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009691-SERVIMEC_111.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "265.5",
+          "valor_api": "225.00",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009687",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009687-MV.CT.25792_NETTALCO_-_Estampadora_K32.2_C8_-_Adicional_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009685",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009685-SAUL_375.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "MANIOBRAS DE MAXIMILA ZAMORA CHAVEZ",
+          "valor_api": "Maximila Zamora Chávez",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1298",
+          "valor_api": "1100.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009684",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009684-SAUL_380.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "MANIOBRAS DE MAXIMILA ZAMORA CHAVEZ",
+          "valor_api": "Maximila Zamora Chávez",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "318.6",
+          "valor_api": "270.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009682",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009682-SAUL_369.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "MANIOBRAS DE MAXIMILA ZAMORA CHAVEZ",
+          "valor_api": "Maximila Zamora Chávez",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "637.2",
+          "valor_api": "540.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009663",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009663-PROF5138_-_EJE_Y_POLEA_QUITQ_PELUSA.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "731.6",
+          "valor_api": "620.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009661",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009661-PRESUPUESTO_Nº_1181-reiman.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20110901331",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009658",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009658-cotizacion_netalco.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20600461436",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009651",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009651-MICRAM_511.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESPECIAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20613573047",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "4000",
+          "valor_api": "8250.00",
+          "causa_error": "PDF_ILEGIBLE",
+          "valor_correcto_es": "NINGUNO",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "4720",
+          "valor_api": "8250.00",
+          "causa_error": "PDF_ILEGIBLE",
+          "valor_correcto_es": "NINGUNO",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009645",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009645-N441_Cercado.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "531",
+          "valor_api": "450.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009644",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009644-E001-069_nettalco_22-12_CQ_Tours.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "CQ-TOURS S.R.LTDA.",
+          "valor_api": "CQ TOURS S.R.L.",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009640",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009640-PV_ATENCION_CONSUMOS_RNS_CONS_ING.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "moneda",
+          "valor_csv": "Soles",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "ruc",
+          "valor_csv": "10069501082",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009638",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009638-Cotización_0904-2025_Nettalco_Contabilidad_Ajuste.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20507849327",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009636",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009636-429.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "10166488635",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "708",
+          "valor_api": "600.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009633",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009633-RIEPSA_098.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": "2"
+        },
+        {
+          "campo": "total",
+          "valor_csv": "660.8",
+          "valor_api": "560.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009632",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009632-RIEPSA_097.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "660.8",
+          "valor_api": "560.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009631",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009631-RIEPSA_096.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "660.8",
+          "valor_api": "560.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009630",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009630-RIEPSA_095.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "660.8",
+          "valor_api": "560.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009629",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009629-RIEPSA_094.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "660.8",
+          "valor_api": "560.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009624",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009624-COT._238-25_STILL_RX20-16_516211D00008-2013.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "total",
+          "valor_csv": "1404.67",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009621",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009621-TEÑIDO_HILO_HIALPESA-06.pdf",
+      "hubo_varios_pdfs": true,
+      "tipo_pdf": "NO_DETERMINADO",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20418108151",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "4213.8",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "4972.28",
+          "valor_api": null,
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009618",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009618-MV.CT.25562A_NETTALCO_-_SSHH_Caballeros_3er_Piso_-_Motor.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009616",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009616-MV.CT.25781A_NETTALCO_-_Control_de_Calidad_Tejeduria_-_MPI.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009615",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009615-PROPUESTA_ECONÓMICA_DE_LIMPIEZA_TRAMPA_DE_GRASA_-_NETTALCO_-_PUNTO_VERDE.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "proveedor",
+          "valor_csv": "HEPAR S.A.C.",
+          "valor_api": "PUNTO VERDE",
+          "causa_error": "AMBOS_CORRECTOS",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1534",
+          "valor_api": "1300.00",
+          "causa_error": "NO_DETERMINADO",
+          "valor_correcto_es": "NO_APLICA",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009614",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009614-MV.CT.25788_NETTALCO_-_Estampadora_K32.2_C8_-_Capacitores_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009610",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009610-MV.CT.25742_NETTALCO_-_Oficina_Supervisor_Tintoreria_-_Cambio_AA_(1).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009602",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009602-MV.CT.25753_NETTALCO_-_Estampadora_C9_C11_-_MPI_(2).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009601",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009601-MV.CT.25754_NETTALCO_-_Estampadora_C9_C11_-_Ducto_(2).pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20547782527",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009589",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009589-Ecom-Pre_0559-25-02_Nettalco_S.A..pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "ruc",
+          "valor_csv": "20507933468",
+          "valor_api": null,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "igv",
+          "valor_csv": "1",
+          "valor_api": false,
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "1770",
+          "valor_api": "1500.00",
+          "causa_error": "ERROR_CSV",
+          "valor_correcto_es": "API",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009578",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009578-PORRAS_E001-11.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_NORMAL",
+      "campos_revisados": [
+        {
+          "campo": "moneda",
+          "valor_csv": "Soles",
+          "valor_api": "No puedo extraer los datos porque el PDF está vacío o no se cargó correctamente. Solo veo una página en blanco sin contenido visible.\n\nPor favor",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "ruc",
+          "valor_csv": "15197650751",
+          "valor_api": "vuelve a subir el documento PDF para que pueda extraer la información solicitada.",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "350",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "350",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    },
+    {
+      "pedido": "2025009576",
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009576-ZAMBRANO_E001-14.pdf",
+      "hubo_varios_pdfs": false,
+      "tipo_pdf": "PDF_ESCANEADO",
+      "campos_revisados": [
+        {
+          "campo": "moneda",
+          "valor_csv": "Soles",
+          "valor_api": "No puedo extraer los datos porque el documento PDF está vacío o no se cargó correctamente. Solo veo una página en blanco sin contenido visible.\n\nPor favor",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "ruc",
+          "valor_csv": "10741422722",
+          "valor_api": "vuelve a subir el PDF para que pueda extraer la información solicitada.",
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "sub_total",
+          "valor_csv": "550",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        },
+        {
+          "campo": "total",
+          "valor_csv": "550",
+          "valor_api": null,
+          "causa_error": "ERROR_IA",
+          "valor_correcto_es": "CSV",
+          "notas": ""
+        }
+      ]
+    }
+  ],
+  "pedidos_revisados": [
+    "2026000178",
+    "2026000176",
+    "2026000175",
+    "2026000174",
+    "2026000173",
+    "2026000170",
+    "2026000161",
+    "2026000143",
+    "2026000133",
+    "2026000132",
+    "2026000131",
+    "2026000126",
+    "2026000121",
+    "2026000120",
+    "2026000110",
+    "2026000078",
+    "2026000068",
+    "2026000043",
+    "2026000039",
+    "2026000014",
+    "2026000013",
+    "2026000012",
+    "2026000010",
+    "2025009773",
+    "2025009767",
+    "2025009766",
+    "2025009765",
+    "2025009764",
+    "2025009763",
+    "2025009762",
+    "2025009761",
+    "2025009749",
+    "2025009748",
+    "2025009744",
+    "2025009740",
+    "2025009726",
+    "2025009721",
+    "2025009720",
+    "2025009719",
+    "2025009695",
+    "2025009694",
+    "2025009693",
+    "2025009692",
+    "2025009691",
+    "2025009687",
+    "2025009685",
+    "2025009684",
+    "2025009682",
+    "2025009663",
+    "2025009661",
+    "2025009658",
+    "2025009651",
+    "2025009645",
+    "2025009644",
+    "2025009640",
+    "2025009638",
+    "2025009636",
+    "2025009633",
+    "2025009632",
+    "2025009631",
+    "2025009630",
+    "2025009629",
+    "2025009624",
+    "2025009621",
+    "2025009618",
+    "2025009616",
+    "2025009615",
+    "2025009614",
+    "2025009610",
+    "2025009602",
+    "2025009601",
+    "2025009589",
+    "2025009578",
+    "2025009576"
+  ]
+}

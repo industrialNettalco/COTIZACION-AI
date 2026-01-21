@@ -1,0 +1,4407 @@
+{
+  "fecha_ejecucion": "2026-01-16T12:39:44.127035",
+  "total_pedidos": 200,
+  "tiempo_total_segundos": 2404.156369447708,
+  "resultados": [
+    {
+      "pedido": "2026000188",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000188-MABE_E001-943.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-943",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 9.089752912521362,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000187",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000187-MABE_E001-939.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-939",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 8.031013250350952,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000184",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000184-MABE_E0001-944.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-944",
+          "fecha_emision": "08/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "250.00",
+          "total": "295.00"
+        },
+        "tiempo_respuesta": 9.17261004447937,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000183",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000183-MABE_E001-941.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-941",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "800.00",
+          "total": "944.00"
+        },
+        "tiempo_respuesta": 8.806673765182495,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000182",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000182-MABE_E001-940.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-940",
+          "fecha_emision": "03/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "600.00",
+          "total": "708.00"
+        },
+        "tiempo_respuesta": 9.036555290222168,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000178",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000178-SAUL_381.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10096887791",
+          "proveedor": "MANIOBRAS",
+          "codigo_factura": "PRESUPUESTO N° 381",
+          "fecha_emision": "27/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "700.00",
+          "total": "700.00"
+        },
+        "tiempo_respuesta": 8.07219123840332,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000176",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000176-TORRES_448.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 448",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "350.00",
+          "total": "350.00"
+        },
+        "tiempo_respuesta": 7.728047609329224,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000175",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000175-TORRES_447.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 447",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "400.00",
+          "total": "400.00"
+        },
+        "tiempo_respuesta": 9.752873420715332,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000174",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000174-TORRES_446.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 446",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1900.00",
+          "total": "1900.00"
+        },
+        "tiempo_respuesta": 7.379969835281372,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000173",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000173-TORRES_446.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 446",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1900.00",
+          "total": "1900.00"
+        },
+        "tiempo_respuesta": 7.904259204864502,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000171",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000171-TRANSERVIS_E001-487.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-487",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "300.00",
+          "total": "354.00"
+        },
+        "tiempo_respuesta": 7.892191648483276,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000170",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000170-TRANSERVIS_E001-485.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-485",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 7.566641330718994,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000169",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000169-TRANSERVIS_E001-485.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-485",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 8.727190017700195,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000168",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000168-TRANSERVIS_E001-484.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-484",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "450.00",
+          "total": "531.00"
+        },
+        "tiempo_respuesta": 7.9921324253082275,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000167",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000167-TC-_003_parada_de_planta_opcional.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "003-2026",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "600.00",
+          "total": "708.00"
+        },
+        "tiempo_respuesta": 7.513824224472046,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000166",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000166-TRANSERVIS_E001-483.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-483",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 8.009572982788086,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000165",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000165-TRANSERVIS_E001-482.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-482",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "450.00",
+          "total": "531.00"
+        },
+        "tiempo_respuesta": 10.614289999008179,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000164",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000164-TC-_009_EXTRACTOR_RAMA_2.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "009-2026",
+          "fecha_emision": "08/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "450.00",
+          "total": "531.00"
+        },
+        "tiempo_respuesta": 7.429084777832031,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000163",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000163-TRANSERVIS_E001-481.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-481",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "450.00",
+          "total": "531.00"
+        },
+        "tiempo_respuesta": 7.8387298583984375,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000161",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000161-TORRES_445.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 445",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "350.00",
+          "total": "350.00"
+        },
+        "tiempo_respuesta": 9.837818622589111,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000155",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000155-SERVICE_008366.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600085388",
+          "proveedor": "SERVICE TRUCK JAPAN SAC",
+          "codigo_factura": "008366",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1065.00",
+          "total": "1256.70"
+        },
+        "tiempo_respuesta": 7.3385231494903564,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000147",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000147-YARLEQUE_E001-20.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10421739931",
+          "proveedor": "YARLEQUE CAVALLINI WILMER SIGIFREDO",
+          "codigo_factura": "E001-20",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "3780.00",
+          "total": "3780.00"
+        },
+        "tiempo_respuesta": 8.202454328536987,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000146",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000146-YARLEQUE_E001-21.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10421739931",
+          "proveedor": "YARLEQUE CAVALLINI WILMER SIGIFREDO",
+          "codigo_factura": "E001-21",
+          "fecha_emision": "07/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "2746.00",
+          "total": "2746.00"
+        },
+        "tiempo_respuesta": 8.258246660232544,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000143",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000143-REP_011_-_26_-_INDUSTRIAS_NETTALCO_S.A.C._-_MOTOR_DE_PUERTA.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "Elevadores y Plataformas del Perú S.A.C.",
+          "codigo_factura": "REP 011/26",
+          "fecha_emision": "08/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "1516.50",
+          "total": "1789.47"
+        },
+        "tiempo_respuesta": 8.034865379333496,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000135",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000135-10258004863-R01-E001-225.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10258004863",
+          "proveedor": "ROSSI COTITO NELLY ROSA",
+          "codigo_factura": "E001-225",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "400.00",
+          "total": "400.00"
+        },
+        "tiempo_respuesta": 5.9001994132995605,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000133",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000133-MV.CT.26005_NETTALCO_-_Estampadora_C6_C7_-_Fuga.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.26005",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "3500.00",
+          "total": "4130.00"
+        },
+        "tiempo_respuesta": 7.787342548370361,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000132",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000132-MV.CT.26002_NETTALCO_-_Estampadora_C9_C10_-_Rejilla.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.26002",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "950.00",
+          "total": "1121.00"
+        },
+        "tiempo_respuesta": 7.866955041885376,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000131",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000131-MV.CT.26006_NETTALCO_-_Estampadora_K32.3_C10_-_Compresor.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.26006",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "4100.00",
+          "total": "4838.00"
+        },
+        "tiempo_respuesta": 8.141456842422485,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000127",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000127-TC-_284_Techo_para_Tablero.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "284-2025",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 7.220264673233032,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000126",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000126-Mod_-_053_-_25_-_elevador_personal.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": null,
+          "proveedor": "Elevadores y Plataformas del Perú S.A.C.",
+          "codigo_factura": "Mod-053/25",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "8500.00",
+          "total": "10030.00"
+        },
+        "tiempo_respuesta": 9.784107208251953,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000125",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000125-F001_-_18054_-_PREVENTIS.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20495680968",
+          "proveedor": "CASTAÑEDA Y CASTAÑEDA SAC",
+          "codigo_factura": "F001-18054",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "912.00",
+          "total": "1076.16"
+        },
+        "tiempo_respuesta": 6.8993589878082275,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000124",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000124-F002-002516_INMOBILIARIA_GRUPO_M&W.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20517941094",
+          "proveedor": "INMOBILIARIA GRUPO M&W S.A.C.",
+          "codigo_factura": "F002-002516",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "960.00",
+          "total": "1132.80"
+        },
+        "tiempo_respuesta": 7.183018922805786,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000123",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000123-F002-002515_INMOBILIARIA_GRUPO_M&W.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20517941094",
+          "proveedor": "INMOBILIARIA GRUPO M&W S.A.C.",
+          "codigo_factura": "F002-002515",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1200.00",
+          "total": "1416.00"
+        },
+        "tiempo_respuesta": 7.286706447601318,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000122",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000122-ALIAGA_346.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10455510665",
+          "proveedor": "Servicios Generales Mike Nick Aliaga Lara",
+          "codigo_factura": "001-000346",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "120.00",
+          "total": "141.60"
+        },
+        "tiempo_respuesta": 7.911239862442017,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000121",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000121-ALIAGA_001-345.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10455510665",
+          "proveedor": "Servicios Generales Mike Nick Aliaga Lara",
+          "codigo_factura": "N° 001-000345",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "750.00",
+          "total": "885.00"
+        },
+        "tiempo_respuesta": 8.731309413909912,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000120",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000120-ALIAGA_001-344.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10455510665",
+          "proveedor": "Servicios Generales Mike Nick Aliaga Lara",
+          "codigo_factura": "001-000344",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "280.00",
+          "total": "330.40"
+        },
+        "tiempo_respuesta": 8.982890844345093,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000119",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000119-ALIAGA_001-343.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10455510665",
+          "proveedor": "Servicios Generales Mike Nick Aliaga Lara",
+          "codigo_factura": "001-000343",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "250.00",
+          "total": "295.00"
+        },
+        "tiempo_respuesta": 7.764758586883545,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000110",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000110-JIREH.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10062006922",
+          "proveedor": "SERVICIOS GENERALES JIREH",
+          "codigo_factura": null,
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1350.00",
+          "total": "1593.00"
+        },
+        "tiempo_respuesta": 7.99999213218689,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000107",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000107-FACTURA_SECURITAS_-_20117920144-01-FA37-00023909.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20117920144",
+          "proveedor": "SECURITAS SAC",
+          "codigo_factura": "FA37-00023909",
+          "fecha_emision": "12/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "39600.66",
+          "total": "46728.78"
+        },
+        "tiempo_respuesta": 7.59510612487793,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000100",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000100-FACTURA_E001-2851.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600613015",
+          "proveedor": "ECOYAMSA S.A.C.",
+          "codigo_factura": "E001-2851",
+          "fecha_emision": "06/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "700.00",
+          "total": "826.00"
+        },
+        "tiempo_respuesta": 6.938753128051758,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000093",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000093-TRANSERVIS_E001-479.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-479",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 7.889933824539185,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000092",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000092-TRANSERVIS_E001-478.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-478",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 7.632462501525879,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000091",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000091-TRANSERVIS_E001-477.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-477",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 8.099919319152832,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000090",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000090-MENDOZA_E001-3532.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3532",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "200.00",
+          "total": "200.00"
+        },
+        "tiempo_respuesta": 7.092900037765503,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000089",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000089-MENDOZA_E001-3531.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3531",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "180.00",
+          "total": "180.00"
+        },
+        "tiempo_respuesta": 7.13736891746521,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000088",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000088-MENDOZA_E001-3530.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3530",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "240.00",
+          "total": "240.00"
+        },
+        "tiempo_respuesta": 7.6404876708984375,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000084",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000084-PROF5155_-_ENGRANAJE_RECTO..pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600758501",
+          "proveedor": "MECANICA INDUSTRIAL SEGAYA S.A.C.",
+          "codigo_factura": "001-0005155",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "550.00",
+          "total": "550.00"
+        },
+        "tiempo_respuesta": 7.495043039321899,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000083",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000083-F001_-_18068_-_PREVENTIS.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20495680968",
+          "proveedor": "CASTAÑEDA Y CASTAÑEDA SAC",
+          "codigo_factura": "F001-18068",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1929.00",
+          "total": "2276.22"
+        },
+        "tiempo_respuesta": 7.118318796157837,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000078",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000078-20101362702-01-F014-3865.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20101362702",
+          "proveedor": "Confecciones Textimax S.A.",
+          "codigo_factura": "F014-00003865",
+          "fecha_emision": "26/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1390.80",
+          "total": "1641.14"
+        },
+        "tiempo_respuesta": 8.154145240783691,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000077",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000077-PORRAS_E001-13.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "15197650751",
+          "proveedor": "PORRAS ESCALANTE RICARDO HONORIO",
+          "codigo_factura": "E001-13",
+          "fecha_emision": "03/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "350.00",
+          "total": "350.00"
+        },
+        "tiempo_respuesta": 6.320329904556274,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000072",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000072-COTIZACION_II_LAMINA_DE_SEGURIDAD_-_NETALLCO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20545557763",
+          "proveedor": "PERUFILMS SERVICIOS GENERALES SAC",
+          "codigo_factura": null,
+          "fecha_emision": "05/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "2500.00",
+          "total": "2950.00"
+        },
+        "tiempo_respuesta": 7.478317737579346,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000068",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000068-TEÑIDO_HILO_HIALPESA-06.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": null,
+          "proveedor": "HIALPESA SAC",
+          "codigo_factura": null,
+          "fecha_emision": "04/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": null,
+          "total": null
+        },
+        "tiempo_respuesta": 6.973361015319824,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000064",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000064-HUARCAYA_REA_CARLOS_ALBERTO_-_92.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "15500069641",
+          "proveedor": "HUARCAYA REA CARLOS ALBERTO",
+          "codigo_factura": "E001-92",
+          "fecha_emision": "04/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1680.00",
+          "total": "1680.00"
+        },
+        "tiempo_respuesta": 6.380064249038696,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000063",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000063-HUARCAYA_REA_CARLOS_ALBERTO_-_91.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "15500069641",
+          "proveedor": "HUARCAYA REA CARLOS ALBERTO",
+          "codigo_factura": "E001-91",
+          "fecha_emision": "04/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1680.00",
+          "total": "1680.00"
+        },
+        "tiempo_respuesta": 6.08762788772583,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000055",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000055-TRANSERVIS_E001-475.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-475",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "700.00",
+          "total": "826.00"
+        },
+        "tiempo_respuesta": 7.139487266540527,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000054",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000054-TRANSERVIS_E001-474.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-474",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "450.00",
+          "total": "531.00"
+        },
+        "tiempo_respuesta": 7.81115198135376,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000053",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000053-TRANSERVIS_E001-473.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-473",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "700.00",
+          "total": "826.00"
+        },
+        "tiempo_respuesta": 7.967515230178833,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000052",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000052-COTIZACION_002-2026_29-12-25_AL_03-01-26_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10400449371",
+          "proveedor": "JAVIER DAVID ALEJOS QUISPE",
+          "codigo_factura": "COTIZACION N° 002-2026",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "1900.00",
+          "total": "2242.00"
+        },
+        "tiempo_respuesta": 6.141685247421265,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000051",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000051-COTIZACION_027-2025_MP_22-12_AL_24-12.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10400449371",
+          "proveedor": "JAVIER DAVID ALEJOS QUISPE",
+          "codigo_factura": "COTIZACION N° 027-2025",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "1050.00",
+          "total": "1239.00"
+        },
+        "tiempo_respuesta": 6.196619033813477,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000050",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000050-FACTURA_E001-14312.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20603251068",
+          "proveedor": "PUNTO VERDE HEPAR S.A.C.",
+          "codigo_factura": "E001-14312",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1583.50",
+          "total": "1868.53"
+        },
+        "tiempo_respuesta": 7.035233497619629,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000049",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000049-FACTURA_E001-14311.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20603251068",
+          "proveedor": "PUNTO VERDE HEPAR S.A.C.",
+          "codigo_factura": "E001-14311",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1457.50",
+          "total": "1719.85"
+        },
+        "tiempo_respuesta": 6.8723509311676025,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000048",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000048-FACTURA_E001-14310.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20603251068",
+          "proveedor": "PUNTO VERDE HEPAR S.A.C.",
+          "codigo_factura": "E001-14310",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1538.00",
+          "total": "1814.84"
+        },
+        "tiempo_respuesta": 7.126713037490845,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000047",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000047-COTIZACIÓN_0015_MÓDULO_DE_DIRECCIÓN_BOSCH_#18.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20613235591",
+          "proveedor": "LAVPSA TECNOLOGIA Y SERVICIOS S.A.C.",
+          "codigo_factura": "COTIZACION N° 0015-2026",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "483.00",
+          "total": "569.94"
+        },
+        "tiempo_respuesta": 8.107468366622925,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000046",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000046-COTIZACIÓN_0015_MÓDULO_DE_DIRECCIÓN_BOSCH_#17.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20613235591",
+          "proveedor": "LAVPSA TECNOLOGIA Y SERVICIOS S.A.C.",
+          "codigo_factura": "COTIZACION N° 0015-2026",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "483.00",
+          "total": "569.94"
+        },
+        "tiempo_respuesta": 7.961143493652344,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000045",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000045-COTIZACION_028-2025_SERVICIOS_NETTALCO_MANTENIMIENTO_MC_26-12.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10400449371",
+          "proveedor": "JAVIER DAVID ALEJOS QUISPE",
+          "codigo_factura": "COTIZACION N° 028-2025",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 6.4370410442352295,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000043",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000043-N443.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "ULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 443",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1000.00",
+          "total": "1000.00"
+        },
+        "tiempo_respuesta": 6.193495512008667,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000039",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000039-PERCY_VALVERDE_TIZ_RNS.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": null,
+          "codigo_factura": null,
+          "fecha_emision": "03/01/2026",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "720.00",
+          "total": "720.00"
+        },
+        "tiempo_respuesta": 8.409008502960205,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000038",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000038-BARTOLOME_01.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20125327509",
+          "proveedor": "SAN BARTOLOME S.A.",
+          "codigo_factura": "14M2026",
+          "fecha_emision": "05/01/2026",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "246.96",
+          "total": "291.41"
+        },
+        "tiempo_respuesta": 8.646038293838501,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000034",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000034-PDF-DOC-E001-27920606845007.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20606845007",
+          "proveedor": "WILROS CONFECCIONES PERUANAS S.A.C.",
+          "codigo_factura": "E001-279",
+          "fecha_emision": "03/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1305.60",
+          "total": "1540.61"
+        },
+        "tiempo_respuesta": 6.873508930206299,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000033",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000033-PDF-DOC-E001-27820606845007.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20606845007",
+          "proveedor": "WILROS CONFECCIONES PERUANAS S.A.C.",
+          "codigo_factura": "E001-278",
+          "fecha_emision": "03/01/2026",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "848.00",
+          "total": "1000.64"
+        },
+        "tiempo_respuesta": 6.7283689975738525,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000030",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000030-PDF-DOC-E001-27720606845007.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20606845007",
+          "proveedor": "WILROS CONFECCIONES PERUANAS S.A.C.",
+          "codigo_factura": "E001-277",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1689.00",
+          "total": "1993.02"
+        },
+        "tiempo_respuesta": 7.235703945159912,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000028",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000028-PDF-DOC-E001-27620606845007.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20606845007",
+          "proveedor": "WILROS CONFECCIONES PERUANAS S.A.C.",
+          "codigo_factura": "E001-276",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1468.80",
+          "total": "1733.18"
+        },
+        "tiempo_respuesta": 6.036038398742676,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000027",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000027-PDF-DOC-E001-27520606845007.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20606845007",
+          "proveedor": "WILROS CONFECCIONES PERUANAS S.A.C.",
+          "codigo_factura": "E001-275",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "864.00",
+          "total": "1019.52"
+        },
+        "tiempo_respuesta": 6.687331199645996,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000018",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000018-COTIZACION_N°0002-2026-20607150550-CETRINSAC.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20607150550",
+          "proveedor": "CONSTRUCCIONES EQUIPOS TECNICOS REBOBINADOINGENIERO S.A.C.",
+          "codigo_factura": "0002-2026-20607150550-CETRINSAC",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "330.00",
+          "total": "389.40"
+        },
+        "tiempo_respuesta": 7.0755295753479,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000016",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000016-RHE10419086105E001112.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10419086105",
+          "proveedor": "ARATOMA DIAZ VERONICA TOLA",
+          "codigo_factura": "E001-112",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "70.00",
+          "total": "70.00"
+        },
+        "tiempo_respuesta": 6.245110988616943,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000015",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000015-EVAC_-_Proforma_Nettalco_SS_V28_Proyecto269_0061-25.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10210842433",
+          "proveedor": "EMILIANO VICENTE ARRIETA CALLIRGOS",
+          "codigo_factura": "0061-25",
+          "fecha_emision": "02/01/2026",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "231.00",
+          "total": "231.00"
+        },
+        "tiempo_respuesta": 7.130626440048218,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000014",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000014-COTIZACION_NETTALCO_25-170.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10104028441",
+          "proveedor": "CEPILLOS INDUSTRIALES",
+          "codigo_factura": "25-170",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "120.00",
+          "total": "141.60"
+        },
+        "tiempo_respuesta": 7.354559898376465,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000013",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000013-COTIZACION_NETTALCO_25-171.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10104028441",
+          "proveedor": "CEPILLOS INDUSTRIALES",
+          "codigo_factura": "25-171",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "310.00",
+          "total": "375.24"
+        },
+        "tiempo_respuesta": 7.750368595123291,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000012",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000012-N442.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "ULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 442",
+          "fecha_emision": "17/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "400.00",
+          "total": "400.00"
+        },
+        "tiempo_respuesta": 7.619634628295898,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000010",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000010-N441.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "ULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 441",
+          "fecha_emision": "17/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "450.00",
+          "total": "450.00"
+        },
+        "tiempo_respuesta": 6.663876295089722,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000007",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000007-MABE_E001-938.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-938",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 7.515796661376953,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000006",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000006-MABE_E001-937.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-937",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 8.110954999923706,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000005",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000005-MABE_E001-936.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-936",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 8.286603450775146,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000004",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000004-MENDOZA_E001-3529.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3529",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "180.00",
+          "total": "180.00"
+        },
+        "tiempo_respuesta": 8.358752489089966,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000003",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000003-MENDOZA_E001-3528.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3528",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "180.00",
+          "total": "180.00"
+        },
+        "tiempo_respuesta": 7.848132610321045,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2026000002",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2026000002-MENDOZA_E001-3527.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3527",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "300.00",
+          "total": "300.00"
+        },
+        "tiempo_respuesta": 7.422854900360107,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009778",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009778-PDF-DOC-E001-37620602112935.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20602112935",
+          "proveedor": "ACADEMIA DE TECNOLOGIA PERUANA S.A.C.",
+          "codigo_factura": "E001-376",
+          "fecha_emision": "31/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1050.00",
+          "total": "1239.00"
+        },
+        "tiempo_respuesta": 6.072238206863403,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009776",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009776-COTIZACION_N°0186-2024-20607150550-CETRINSAC_(1)_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20607150550",
+          "proveedor": "CONSTRUCCIONES EQUIPOS TECNICOS REBOBINADOINGENIERO S.A.C.",
+          "codigo_factura": "0186-2025-20607150550-CETRINSAC",
+          "fecha_emision": "20/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "175.00",
+          "total": "206.50"
+        },
+        "tiempo_respuesta": 7.237973690032959,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009774",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009774-E001_-_80_FERNANDEZ_MONTES_LISSETH.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10482015838",
+          "proveedor": "FERNANDEZ MONTES LISSETH FIORELA",
+          "codigo_factura": "E001-80",
+          "fecha_emision": "08/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "550.00",
+          "total": "550.00"
+        },
+        "tiempo_respuesta": 6.05071759223938,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009773",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009773-CamScanner_30-12-2025_19.09.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10425714801",
+          "proveedor": "QUISPE PEÑA NERY",
+          "codigo_factura": "E001-6",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1521.00",
+          "total": "1794.78"
+        },
+        "tiempo_respuesta": 7.6317243576049805,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009772",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009772-CamScanner_30-12-2025_19.09.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10425714801",
+          "proveedor": "QUISPE PEÑA NERY",
+          "codigo_factura": "E001-6",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1521.00",
+          "total": "1794.78"
+        },
+        "tiempo_respuesta": 9.292673826217651,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009771",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009771-CamScanner_30-12-2025_18.54.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10425714801",
+          "proveedor": "QUISPE PEÑA NERY",
+          "codigo_factura": "E001-7",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1521.00",
+          "total": "1794.78"
+        },
+        "tiempo_respuesta": 8.63016128540039,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009770",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009770-CamScanner_30-12-2025_18.42.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10425714801",
+          "proveedor": "QUISPE PEÑA NERY",
+          "codigo_factura": "E001-8",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1521.00",
+          "total": "1794.78"
+        },
+        "tiempo_respuesta": 9.055772542953491,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009769",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009769-PDF-DOC-E00132310408076493.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10408076493",
+          "proveedor": "ARIAS CARHUAPOMA MARIA MAGDALENA",
+          "codigo_factura": "E001-323",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "963.50",
+          "total": "1136.93"
+        },
+        "tiempo_respuesta": 6.609135627746582,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009768",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009768-PDF-DOC-E00132410408076493.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10408076493",
+          "proveedor": "ARIAS CARHUAPOMA MARIA MAGDALENA",
+          "codigo_factura": "E001-324",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "787.50",
+          "total": "929.25"
+        },
+        "tiempo_respuesta": 6.525553226470947,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009767",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009767-COT_0551.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "SERVICIOS GENERALES MICRAM SAC",
+          "codigo_factura": "551",
+          "fecha_emision": "20/12/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "900.00",
+          "total": "900.00"
+        },
+        "tiempo_respuesta": 7.252896547317505,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009766",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009766-COT_0550_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "SERVICIOS GENERALES MICRAM",
+          "codigo_factura": "N.º 550",
+          "fecha_emision": "20/12/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "1010.00",
+          "total": "1010.00"
+        },
+        "tiempo_respuesta": 7.590173721313477,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009765",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009765-LEOTEX_1067.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": null,
+          "proveedor": "ELECTRONICA LEOTEX",
+          "codigo_factura": "COT-20251067",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "220.00",
+          "total": "259.60"
+        },
+        "tiempo_respuesta": 8.80495572090149,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009764",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009764-367.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10096887791",
+          "proveedor": "Maximila Zamora Chávez",
+          "codigo_factura": "367",
+          "fecha_emision": "26/11/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "360.00",
+          "total": "360.00"
+        },
+        "tiempo_respuesta": 9.133403539657593,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009763",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009763-PRESUPUESTO_Nº_1214-TRANSFORMADOR_DE_RECTILINEOS.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "REIMAN E.I.R.L.",
+          "codigo_factura": "PRESUPUESTO Nº 1214",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "140.00",
+          "total": "165.20"
+        },
+        "tiempo_respuesta": 7.1518425941467285,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009762",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009762-LIQUIDACION_NETTALCO_centrador_de_tela.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20516214415",
+          "proveedor": "MONTACARGAS UNIVERSO S.A.C.",
+          "codigo_factura": "26393",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "140.00",
+          "total": "140.00"
+        },
+        "tiempo_respuesta": 7.105246305465698,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009761",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009761-LIQUIDACION_NETTALCO_Pablo_Baldoceda_26387_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20516214415",
+          "proveedor": "MONTACARGAS UNIVERSO S.A.C.",
+          "codigo_factura": "26387",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "180.00",
+          "total": "180.00"
+        },
+        "tiempo_respuesta": 7.209080219268799,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009760",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009760-GUIA_E001-443.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-443",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "290.00",
+          "total": "342.20"
+        },
+        "tiempo_respuesta": 7.321547508239746,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009759",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009759-GUIA_E001-442.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-442",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "300.00",
+          "total": "354.00"
+        },
+        "tiempo_respuesta": 6.188780784606934,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009757",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009757-GUIA_E001-441.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-441",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "290.00",
+          "total": "342.20"
+        },
+        "tiempo_respuesta": 8.667551040649414,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009756",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009756-GUIA_E001-440.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-440",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "280.00",
+          "total": "330.40"
+        },
+        "tiempo_respuesta": 6.292699337005615,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009755",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009755-GUIA_E001-439.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-439",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "280.00",
+          "total": "330.40"
+        },
+        "tiempo_respuesta": 6.5407774448394775,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009754",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009754-GUIA_E001-438.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-438",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "280.00",
+          "total": "330.40"
+        },
+        "tiempo_respuesta": 6.370452880859375,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009753",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009753-GUIA_E001-437.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-437",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "270.00",
+          "total": "318.60"
+        },
+        "tiempo_respuesta": 6.810971975326538,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009752",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009752-GUIA_E001-436.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10441556255",
+          "proveedor": "GUIA VARGAS JAVIER EDUARDO",
+          "codigo_factura": "E001-436",
+          "fecha_emision": "30/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "280.00",
+          "total": "330.40"
+        },
+        "tiempo_respuesta": 6.524550914764404,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009749",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009749-APOYOS_DICIEMBRE_NETTALCO_VULCANO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "PROCARVI",
+          "codigo_factura": null,
+          "fecha_emision": "26/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "772.32",
+          "total": "772.32"
+        },
+        "tiempo_respuesta": 7.197466611862183,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009748",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009748-HHEE_DICIEMBRE_NETTALCO_VULCANO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "PROCARVI",
+          "codigo_factura": null,
+          "fecha_emision": "26/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "5021.28",
+          "total": "5021.28"
+        },
+        "tiempo_respuesta": 7.1493330001831055,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009747",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009747-MABE_E001-935.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-935",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "650.00",
+          "total": "767.00"
+        },
+        "tiempo_respuesta": 8.502469778060913,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009745",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009745-01_OP_ENERO_2026_NETTALCO_VULCANO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20265658475",
+          "proveedor": "PROCARVI SA",
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "2180.41",
+          "total": "2572.88"
+        },
+        "tiempo_respuesta": 7.148666143417358,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009744",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009744-VALORIZACION_ENERO_2026_NETTALCO_VULCANO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20265658475",
+          "proveedor": "PROCARVI SA",
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "33807.59",
+          "total": "39892.95"
+        },
+        "tiempo_respuesta": 7.258935213088989,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009743",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009743-JERSY_E001-865.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-865",
+          "fecha_emision": "05/06/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "40.00",
+          "total": "47.20"
+        },
+        "tiempo_respuesta": 10.692574262619019,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009742",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009742-TC-_278_Rejillas_de_Inox.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "278-2025",
+          "fecha_emision": "12/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1350.00",
+          "total": "1593.00"
+        },
+        "tiempo_respuesta": 6.904319763183594,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009741",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009741-TC-_281_Apaza.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "281-2025",
+          "fecha_emision": "18/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "320.00",
+          "total": "377.60"
+        },
+        "tiempo_respuesta": 7.302325963973999,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009740",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009740-COTIZACIÓN_DE_MANTENIMIENTO_PARA_BORDADORA_DE_10_CABEZAS.docx_(2).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": null,
+          "proveedor": "Edwin Gianfranco López Vásquez",
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "1150.00",
+          "total": "1150.00"
+        },
+        "tiempo_respuesta": 6.592648506164551,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009736",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009736-COTIZACION_TRABAJO_REALIZADO_EN_BORDADORA_10_CABEZAS.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10721035188",
+          "proveedor": "EDWIN GIANFRANCO LOPEZ VASQUEZ",
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "635.60",
+          "total": "750.00"
+        },
+        "tiempo_respuesta": 6.39335823059082,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009726",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009726-MICRAM_544.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "SERVICIOS GENERALES MICRAM SAC",
+          "codigo_factura": "N.º 544",
+          "fecha_emision": "24/11/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "350.00",
+          "total": "350.00"
+        },
+        "tiempo_respuesta": 7.156384468078613,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009725",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009725-ALIAGA_001-326.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10455510665",
+          "proveedor": "Servicios Generales Mike Nick Aliaga Lara",
+          "codigo_factura": "001-000326",
+          "fecha_emision": "28/11/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "950.00",
+          "total": "1121.00"
+        },
+        "tiempo_respuesta": 7.4867517948150635,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009721",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009721-COTZ_RYR_3431-2025_NETTALCO_IIEE_NUEVO_CALDERO_DE_ACEITE_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "R&R CONTROLMATIC SAC",
+          "codigo_factura": "Ctz. RYR 3431-2025",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "8942.00",
+          "total": "8942.00"
+        },
+        "tiempo_respuesta": 7.4602155685424805,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009720",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009720-Cot._correctivo_b.c.i_valvula_test_drain_-_nettalco_vulcano_SG_-157.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "SOLUCIONES SERVICIOS TECNICOS BOMBAS GENERAL",
+          "codigo_factura": "SG-157",
+          "fecha_emision": "28/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "700.00",
+          "total": "826.00"
+        },
+        "tiempo_respuesta": 7.641440153121948,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009719",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009719-PORRAS_E001-12.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "15197650751",
+          "proveedor": "PORRAS ESCALANTE RICARDO HONORIO",
+          "codigo_factura": "E001-12",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "350.00",
+          "total": "350.00"
+        },
+        "tiempo_respuesta": 6.330343008041382,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009714",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009714-EVAC_-_Proforma_Nettalco_SPA_V5_Proyecto268_0060-25.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10210842433",
+          "proveedor": "EMILIANO VICENTE ARRIETA CALLIRGOS",
+          "codigo_factura": "0060-25",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "720.00",
+          "total": "720.00"
+        },
+        "tiempo_respuesta": 7.58825159072876,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009713",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009713-EVAC_-_Proforma_Nettalco_SS_V27_Proyecto267_0059-25.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10210842433",
+          "proveedor": "EMILIANO VICENTE ARRIETA CALLIRGOS",
+          "codigo_factura": "0059-25",
+          "fecha_emision": "29/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "325.00",
+          "total": "325.00"
+        },
+        "tiempo_respuesta": 7.022697448730469,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009704",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009704-PDF-DOC-E001-32210408076493.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10408076493",
+          "proveedor": "ARIAS CARHUAPOMA MARIA MAGDALENA",
+          "codigo_factura": "E001-322",
+          "fecha_emision": "25/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1578.00",
+          "total": "1862.04"
+        },
+        "tiempo_respuesta": 6.484294414520264,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009699",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009699-PDF-DOC-E001-32010408076493.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10408076493",
+          "proveedor": "ARIAS CARHUAPOMA MARIA MAGDALENA",
+          "codigo_factura": "E001-320",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1365.00",
+          "total": "1610.70"
+        },
+        "tiempo_respuesta": 6.760853052139282,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009698",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009698-PDF-DOC-E001-32110408076493.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10408076493",
+          "proveedor": "ARIAS CARHUAPOMA MARIA MAGDALENA",
+          "codigo_factura": "E001-321",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "499.50",
+          "total": "589.41"
+        },
+        "tiempo_respuesta": 6.455498695373535,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009695",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009695-CAIMSO_532.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10105227359",
+          "proveedor": "Importaciones y Venta CAIMSO",
+          "codigo_factura": "532",
+          "fecha_emision": "05/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "200.00",
+          "total": "200.00"
+        },
+        "tiempo_respuesta": 8.374945163726807,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009694",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009694-CAIMSO_533.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10105227359",
+          "proveedor": "IMPORTACIONES Y VENTA CAIMSO",
+          "codigo_factura": "533",
+          "fecha_emision": "10/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "200.00",
+          "total": "200.00"
+        },
+        "tiempo_respuesta": 8.924829483032227,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009693",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009693-CAIMSO_534.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10105227359",
+          "proveedor": "Importaciones y Venta CAIMSO",
+          "codigo_factura": "Cotización 534",
+          "fecha_emision": "12/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "265.00",
+          "total": "265.00"
+        },
+        "tiempo_respuesta": 8.25214171409607,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009692",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009692-CAIMSO_535.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10105227359",
+          "proveedor": "Importaciones y Venta CAIMSO",
+          "codigo_factura": "Cotización: 535",
+          "fecha_emision": "13/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "80.00",
+          "total": "80.00"
+        },
+        "tiempo_respuesta": 10.141564130783081,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009691",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009691-SERVIMEC_111.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "10097171675",
+          "proveedor": "SERVIMEC Richar Rojas Villanueva",
+          "codigo_factura": "PPTO No. 111 - 2025",
+          "fecha_emision": "06/12/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "225.00",
+          "total": "225.00"
+        },
+        "tiempo_respuesta": 8.925095081329346,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009687",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009687-MV.CT.25792_NETTALCO_-_Estampadora_K32.2_C8_-_Adicional_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25792",
+          "fecha_emision": "26/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "950.00",
+          "total": "1121.00"
+        },
+        "tiempo_respuesta": 7.933566093444824,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009685",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009685-SAUL_375.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10096887791",
+          "proveedor": "Maximila Zamora Chávez",
+          "codigo_factura": "PRESUPUESTO N° 375",
+          "fecha_emision": "09/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "1100.00",
+          "total": "1100.00"
+        },
+        "tiempo_respuesta": 7.67956280708313,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009684",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009684-SAUL_380.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10096887791",
+          "proveedor": "Maximila Zamora Chávez",
+          "codigo_factura": "380",
+          "fecha_emision": "15/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "270.00",
+          "total": "270.00"
+        },
+        "tiempo_respuesta": 7.404837131500244,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009682",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009682-SAUL_369.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10096887791",
+          "proveedor": "Maximila Zamora Chávez",
+          "codigo_factura": "PRESUPUESTO N° 369",
+          "fecha_emision": "03/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "540.00",
+          "total": "540.00"
+        },
+        "tiempo_respuesta": 8.507041454315186,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009669",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009669-ZAMBRANO_E001-15.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10741422722",
+          "proveedor": "TRUJILLO ZAMBRANO ANGIE SIBEL",
+          "codigo_factura": "E001-15",
+          "fecha_emision": "24/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "550.00",
+          "total": "550.00"
+        },
+        "tiempo_respuesta": 6.093181133270264,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009663",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009663-PROF5138_-_EJE_Y_POLEA_QUITQ_PELUSA.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600758501",
+          "proveedor": "MECANICA INDUSTRIAL SEGAYA S.A.C.",
+          "codigo_factura": "001-0005138",
+          "fecha_emision": "17/12/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "620.00",
+          "total": "620.00"
+        },
+        "tiempo_respuesta": 8.649423837661743,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009661",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009661-PRESUPUESTO_Nº_1181-reiman.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "REIMAN E.I.R.L.",
+          "codigo_factura": "PRESUPUESTO Nº 1181",
+          "fecha_emision": "16/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "600.00",
+          "total": "708.00"
+        },
+        "tiempo_respuesta": 7.111871242523193,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009660",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009660-COTIZACION_026-2025_SERVICIOS_NETTALCO_MANTENIMIENTO_MP_15-12_AL_20-12.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10400449371",
+          "proveedor": "JAVIER DAVID ALEJOS QUISPE",
+          "codigo_factura": "COTIZACION N° 026-2025",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "2600.00",
+          "total": "3068.00"
+        },
+        "tiempo_respuesta": 6.959167718887329,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009659",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009659-MABE_E001-934.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-934",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 8.144513368606567,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009658",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009658-cotizacion_netalco.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "ATSGENERAL ELECTRIC",
+          "codigo_factura": null,
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1100.00",
+          "total": "1298.00"
+        },
+        "tiempo_respuesta": 8.529307842254639,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009657",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009657-MABE_E001-933.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20518621638",
+          "proveedor": "EMPRESA DE TRANSPORTE Y SERVICIOS MABE EIRL",
+          "codigo_factura": "E001-933",
+          "fecha_emision": "17/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "400.00",
+          "total": "472.00"
+        },
+        "tiempo_respuesta": 8.2597336769104,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009651",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009651-MICRAM_511.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "SERVICIOS GENERALES MICRAM",
+          "codigo_factura": "511",
+          "fecha_emision": "06/11/2025",
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "8250.00",
+          "total": "8250.00"
+        },
+        "tiempo_respuesta": 8.879353761672974,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009650",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009650-E001-1418.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600752333",
+          "proveedor": "LB & C S.A.C.",
+          "codigo_factura": "E001-1418",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "375.00",
+          "total": "442.50"
+        },
+        "tiempo_respuesta": 6.0999579429626465,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009649",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009649-E001-1417.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600752333",
+          "proveedor": "LB & C S.A.C.",
+          "codigo_factura": "E001-1417",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "375.00",
+          "total": "442.50"
+        },
+        "tiempo_respuesta": 6.559059143066406,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009646",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009646-COT.MIL_C001-9929_NETTALCO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20190143806",
+          "proveedor": "MECANICA INDUSTRIAL LIRA S.A.C.",
+          "codigo_factura": "C001-9929",
+          "fecha_emision": "23/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "600.00",
+          "total": "708.00"
+        },
+        "tiempo_respuesta": 6.952538251876831,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009645",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009645-N441_Cercado.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "ULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 441",
+          "fecha_emision": "10/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "450.00",
+          "total": "450.00"
+        },
+        "tiempo_respuesta": 6.440694570541382,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009644",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009644-E001-069_nettalco_22-12_CQ_Tours.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20265985328",
+          "proveedor": "CQ TOURS S.R.L.",
+          "codigo_factura": "E001-69",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Contado",
+          "igv": true,
+          "sub_total": "1800.00",
+          "total": "2124.00"
+        },
+        "tiempo_respuesta": 6.391542673110962,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009640",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009640-PV_ATENCION_CONSUMOS_RNS_CONS_ING.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": null,
+          "ruc": null,
+          "proveedor": null,
+          "codigo_factura": null,
+          "fecha_emision": "23/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "840.00",
+          "total": "840.00"
+        },
+        "tiempo_respuesta": 9.410547733306885,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009638",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009638-Cotización_0904-2025_Nettalco_Contabilidad_Ajuste.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "BF GLOBAL S.A.C.",
+          "codigo_factura": "0904/2025",
+          "fecha_emision": null,
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "5475.49",
+          "total": "6461.08"
+        },
+        "tiempo_respuesta": 8.617496967315674,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009636",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009636-429.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MULTISERVICIOS GENERALES TORRES",
+          "codigo_factura": "PRESUPUESTO N° 429",
+          "fecha_emision": "19/11/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "600.00",
+          "total": "600.00"
+        },
+        "tiempo_respuesta": 10.226049661636353,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009633",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009633-RIEPSA_098.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20556988642",
+          "proveedor": "RIEPSA ELECTRONIC E.I.R.L.",
+          "codigo_factura": "E001-",
+          "fecha_emision": "20/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "560.00",
+          "total": "560.00"
+        },
+        "tiempo_respuesta": 10.176639080047607,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009632",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009632-RIEPSA_097.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20556988642",
+          "proveedor": "RIEPSA ELECTRONIC E.I.R.L.",
+          "codigo_factura": "E001-",
+          "fecha_emision": "16/12/2025",
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": "560.00",
+          "total": "560.00"
+        },
+        "tiempo_respuesta": 10.626315355300903,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009631",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009631-RIEPSA_096.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20556988642",
+          "proveedor": "RIEPSA ELECTRONIC E.I.R.L.",
+          "codigo_factura": "E001-",
+          "fecha_emision": "12/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "560.00",
+          "total": "560.00"
+        },
+        "tiempo_respuesta": 10.611155986785889,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009630",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009630-RIEPSA_095.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20556988642",
+          "proveedor": "RIEPSA ELECTRONIC E.I.R.L.",
+          "codigo_factura": "E001-",
+          "fecha_emision": "08/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "560.00",
+          "total": "560.00"
+        },
+        "tiempo_respuesta": 9.80643892288208,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009629",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009629-RIEPSA_094.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20556988642",
+          "proveedor": "RIEPSA ELECTRONIC E.I.R.L.",
+          "codigo_factura": "E001-",
+          "fecha_emision": "04/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "560.00",
+          "total": "560.00"
+        },
+        "tiempo_respuesta": 10.61142635345459,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009624",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009624-COT._238-25_STILL_RX20-16_516211D00008-2013.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": "20613001876",
+          "proveedor": "BDM MAQUINARIAS Y SERVICIOS SAC",
+          "codigo_factura": "238-25",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": "1190.40",
+          "total": null
+        },
+        "tiempo_respuesta": 8.274237871170044,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009621",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009621-TEÑIDO_HILO_HIALPESA-06.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "DOLARES",
+          "ruc": null,
+          "proveedor": "HIALPESA SAC",
+          "codigo_factura": null,
+          "fecha_emision": "04/12/2025",
+          "forma_pago": null,
+          "igv": true,
+          "sub_total": null,
+          "total": null
+        },
+        "tiempo_respuesta": 6.7590250968933105,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009618",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009618-MV.CT.25562A_NETTALCO_-_SSHH_Caballeros_3er_Piso_-_Motor.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25562A",
+          "fecha_emision": "01/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "550.00",
+          "total": "649.00"
+        },
+        "tiempo_respuesta": 6.952181577682495,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009616",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009616-MV.CT.25781A_NETTALCO_-_Control_de_Calidad_Tejeduria_-_MPI.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25781A",
+          "fecha_emision": "19/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1100.00",
+          "total": "1298.00"
+        },
+        "tiempo_respuesta": 8.61323595046997,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009615",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009615-PROPUESTA_ECONÓMICA_DE_LIMPIEZA_TRAMPA_DE_GRASA_-_NETTALCO_-_PUNTO_VERDE.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20603251068",
+          "proveedor": "PUNTO VERDE",
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": "Credito",
+          "igv": false,
+          "sub_total": "1300.00",
+          "total": "1300.00"
+        },
+        "tiempo_respuesta": 11.136036396026611,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009614",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009614-MV.CT.25788_NETTALCO_-_Estampadora_K32.2_C8_-_Capacitores_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25788",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 9.239818572998047,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009613",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009613-TRANSERVIS_E001-466.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20609899442",
+          "proveedor": "TRANSERVIS 67 S.A.C.",
+          "codigo_factura": "E001-466",
+          "fecha_emision": "19/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "500.00",
+          "total": "590.00"
+        },
+        "tiempo_respuesta": 8.945465087890625,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009611",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009611-JERSY_E001-950.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-950",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "94.33",
+          "total": "111.31"
+        },
+        "tiempo_respuesta": 11.084084033966064,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009610",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009610-MV.CT.25742_NETTALCO_-_Oficina_Supervisor_Tintoreria_-_Cambio_AA_(1).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25742",
+          "fecha_emision": "28/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "8600.00",
+          "total": "10148.00"
+        },
+        "tiempo_respuesta": 8.166933059692383,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009609",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009609-JERSY_E001-949.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-949",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "657.99",
+          "total": "776.43"
+        },
+        "tiempo_respuesta": 11.008406400680542,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009608",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009608-JERSY_E001-948.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-948",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "296.65",
+          "total": "350.05"
+        },
+        "tiempo_respuesta": 10.290848016738892,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009607",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009607-JERSY_E001-946.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-946",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "415.31",
+          "total": "490.07"
+        },
+        "tiempo_respuesta": 10.978736162185669,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009606",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009606-JERSY_E001-943.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-943",
+          "fecha_emision": "11/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "340.00",
+          "total": "401.20"
+        },
+        "tiempo_respuesta": 11.354815006256104,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009605",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009605-JERSY_E001-941.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-941",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "30.00",
+          "total": "35.40"
+        },
+        "tiempo_respuesta": 9.648990869522095,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009604",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009604-JERSY_E001-939.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-939",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "356.65",
+          "total": "420.85"
+        },
+        "tiempo_respuesta": 10.69261622428894,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009603",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009603-JERSY_E001-938.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-938",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "60.00",
+          "total": "70.80"
+        },
+        "tiempo_respuesta": 9.111807107925415,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009602",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009602-MV.CT.25753_NETTALCO_-_Estampadora_C9_C11_-_MPI_(2).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25753",
+          "fecha_emision": "03/10/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1600.00",
+          "total": "1888.00"
+        },
+        "tiempo_respuesta": 7.145870685577393,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009601",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009601-MV.CT.25754_NETTALCO_-_Estampadora_C9_C11_-_Ducto_(2).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "MV PERU REPRESENTACIONES S.A.C.",
+          "codigo_factura": "MV.CT.25754",
+          "fecha_emision": "03/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1700.00",
+          "total": "2006.00"
+        },
+        "tiempo_respuesta": 9.230374336242676,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009600",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009600-JERSY_E001-937.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-937",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "237.99",
+          "total": "280.83"
+        },
+        "tiempo_respuesta": 11.025762796401978,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009599",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009599-JERSY_E001-936.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-936",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "177.99",
+          "total": "210.03"
+        },
+        "tiempo_respuesta": 10.474065780639648,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009598",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009598-JERSY_E001-935.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-935",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "237.32",
+          "total": "280.04"
+        },
+        "tiempo_respuesta": 11.678523778915405,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009597",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009597-JERSY_E001-934.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-934",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "35.00",
+          "total": "41.30"
+        },
+        "tiempo_respuesta": 10.023766279220581,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009596",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009596-JERSY_E001-933.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-933",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "533.97",
+          "total": "630.08"
+        },
+        "tiempo_respuesta": 9.601349115371704,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009594",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009594-COT._MIL_C001-9917_NETTALCO.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20190143806",
+          "proveedor": "MECANICA INDUSTRIAL LIRA S.A.C.",
+          "codigo_factura": "C001-9917",
+          "fecha_emision": "19/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "250.00",
+          "total": "295.00"
+        },
+        "tiempo_respuesta": 7.752797842025757,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009592",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009592-JERSY_E001-932.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-932",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "20.00",
+          "total": "23.60"
+        },
+        "tiempo_respuesta": 10.489075422286987,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009591",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009591-JERSY_E001-931.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-931",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "35.00",
+          "total": "41.30"
+        },
+        "tiempo_respuesta": 9.084251165390015,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009590",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009590-JERSY_E001-930.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-930",
+          "fecha_emision": "29/11/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "415.31",
+          "total": "490.07"
+        },
+        "tiempo_respuesta": 11.434249877929688,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009589",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009589-Ecom-Pre_0559-25-02_Nettalco_S.A..pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": null,
+          "proveedor": "Eco-Mapping S.A.C.",
+          "codigo_factura": "ECOM-PRE-0559-25-02",
+          "fecha_emision": null,
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "1500.00",
+          "total": "1500.00"
+        },
+        "tiempo_respuesta": 8.681061744689941,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009588",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009588-E001-1415.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600752333",
+          "proveedor": "LB & C S.A.C.",
+          "codigo_factura": "E001-1415",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "375.00",
+          "total": "442.50"
+        },
+        "tiempo_respuesta": 6.157221794128418,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009587",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009587-TC-_274.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20513150068",
+          "proveedor": "TC Servicios Generales S.A.C.",
+          "codigo_factura": "274-2025",
+          "fecha_emision": "01/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1680.00",
+          "total": "1982.40"
+        },
+        "tiempo_respuesta": 7.939220190048218,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009586",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009586-MENDOZA_E001-3526.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3526",
+          "fecha_emision": "21/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "100.00",
+          "total": "100.00"
+        },
+        "tiempo_respuesta": 9.59013319015503,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009585",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009585-PDF-DOC-E001-87020555885203_(2).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20555885203",
+          "proveedor": "IMPRENTA JERSY S.A.C.",
+          "codigo_factura": "E001-870",
+          "fecha_emision": "08/07/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "250.00",
+          "total": "295.00"
+        },
+        "tiempo_respuesta": 6.534095287322998,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009584",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009584-FACTURA_E001-1774.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20508337630",
+          "proveedor": "JPFIRE S.A.C.",
+          "codigo_factura": "E001-1774",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "1350.00",
+          "total": "1593.00"
+        },
+        "tiempo_respuesta": 6.036869049072266,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009583",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009583-MENDOZA_E001-3525.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3525",
+          "fecha_emision": "21/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "120.00",
+          "total": "120.00"
+        },
+        "tiempo_respuesta": 14.15542459487915,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009582",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009582-MENDOZA_E001-3524.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "10433758949",
+          "proveedor": "MENDOZA AMORETTI VICTOR MANUEL",
+          "codigo_factura": "E001-3524",
+          "fecha_emision": "21/12/2025",
+          "forma_pago": "Contado",
+          "igv": false,
+          "sub_total": "100.00",
+          "total": "100.00"
+        },
+        "tiempo_respuesta": 10.57450819015503,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009580",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": true,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009580-FACTURA_E001-1772.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20508337630",
+          "proveedor": "JPFIRE S.A.C.",
+          "codigo_factura": "E001-1772",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "428.00",
+          "total": "505.04"
+        },
+        "tiempo_respuesta": 6.6167192459106445,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009579",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009579-E001-1413_(2).pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20600752333",
+          "proveedor": "LB & C S.A.C.",
+          "codigo_factura": "E001-1413",
+          "fecha_emision": "12/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "390.00",
+          "total": "460.20"
+        },
+        "tiempo_respuesta": 6.029385328292847,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009578",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009578-PORRAS_E001-11.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "No puedo extraer los datos porque el PDF está vacío o no se cargó correctamente. Solo veo una página en blanco sin contenido visible.\n\nPor favor",
+          "ruc": "vuelve a subir el documento PDF para que pueda extraer la información solicitada.",
+          "proveedor": null,
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": null,
+          "total": null
+        },
+        "tiempo_respuesta": 7.300056457519531,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009577",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009577-FACTURA_E001-1772.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "SOLES",
+          "ruc": "20508337630",
+          "proveedor": "JPFIRE S.A.C.",
+          "codigo_factura": "E001-1772",
+          "fecha_emision": "22/12/2025",
+          "forma_pago": "Credito",
+          "igv": true,
+          "sub_total": "428.00",
+          "total": "505.04"
+        },
+        "tiempo_respuesta": 6.565297842025757,
+        "intentos": 1
+      },
+      "error": null
+    },
+    {
+      "pedido": "2025009576",
+      "pdf_encontrado": true,
+      "hubo_varios_pdfs": false,
+      "pdf_path": "O:\\Publicar_Web\\Ordenes_Servicio\\2025009576-ZAMBRANO_E001-14.pdf",
+      "api_response": {
+        "documento": {
+          "moneda": "No puedo extraer los datos porque el documento PDF está vacío o no se cargó correctamente. Solo veo una página en blanco sin contenido visible.\n\nPor favor",
+          "ruc": "vuelve a subir el PDF para que pueda extraer la información solicitada.",
+          "proveedor": null,
+          "codigo_factura": null,
+          "fecha_emision": null,
+          "forma_pago": null,
+          "igv": false,
+          "sub_total": null,
+          "total": null
+        },
+        "tiempo_respuesta": 6.9588987827301025,
+        "intentos": 1
+      },
+      "error": null
+    }
+  ]
+}
