@@ -13,7 +13,7 @@ COPY claude_cookies_selenium.jso[n] ./
 EXPOSE 8001
 
 # Agregar label para identificación
-LABEL version="claude_v2"
-LABEL description="Claude API v2 - Pure API without Selenium"
+LABEL version="claude_v3"
+LABEL description="Claude API v3 - Pure API with email authentication"
 
 CMD ["python3", "main.py"]

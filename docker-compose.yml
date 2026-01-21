@@ -1,7 +1,7 @@
 # docker-compose.yml
 services:
-  claude-api-v2:  # ← Nombre del servicio cambiado
-    container_name: claude_v2  # ← Nombre del contenedor
+  claude-api-v3:
+    container_name: claude_v3
     build: .
     ports:
       - "8001:8001"
@@ -10,3 +10,4 @@ services:
     volumes:
       - ./pdfs:/app/pdfs
       - ./resultados:/app/resultados
+      - ./claude_cookies_selenium.json:/app/claude_cookies_selenium.json
